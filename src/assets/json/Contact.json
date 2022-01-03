@@ -1,0 +1,19 @@
+[{
+        "icon": "mdi-github",
+        "info": "https://github.com/frankliu197",
+        "link": "https://github.com/frankliu197",
+        "type": "Github"
+    },
+    {
+        "icon": "mdi-email",
+        "info": "frankliu197@gmail.com",
+        "link": "mailto:frankliu197@gmail.com",
+        "type": "Email"
+    },
+    {
+        "icon": "mdi-linkedin",
+        "info": "Fred Liu",
+        "link": "https://ca.linkedin.com/in/fred-liu-a457a518a",
+        "type": "Linkedin"
+    }
+]

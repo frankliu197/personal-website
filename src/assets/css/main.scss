@@ -1,0 +1,17 @@
+.horizontal-aligner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.vertical-aligner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen {
+    height: 100vh;
+    width: 100vw;
+}
