@@ -20,7 +20,7 @@
             span {{ contact.info }}
 </template>
 
-<script>
+<script lang="ts">
 import contactInfo from "@/assets/json/Contact.json"
 import emitter from "@/services/emitter"
 import Vue from 'vue';

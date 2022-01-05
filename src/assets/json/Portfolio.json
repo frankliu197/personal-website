@@ -1,0 +1,79 @@
+{
+    "experiences": [{
+            "title": "Red Canari",
+            "start": "May 2021",
+            "end": "September 2021",
+            "link": "redcanari.com"
+        },
+        {
+            "title": "Ericsson",
+            "start": "May 2020",
+            "end": "Aug 2021",
+            "link": "ericsson.com"
+        },
+        {
+            "title": "Kinaxis",
+            "start": "May 2019",
+            "end": "Aug 2019",
+            "link": "kinaxis.com"
+        },
+        {
+            "title": "Carleton University",
+            "start": "May 2018",
+            "end": "Aug 2018",
+            "link": "carleton.ca"
+        }
+
+    ],
+    "projects": [{
+        "title": "Chess Learning Program",
+        "start": "September 2016",
+        "end": "June 2017",
+        "link": "redcanari.com"
+    }],
+    "skills": [],
+    "hobbies": [{
+            "title": "Piano",
+            "link": "/Piano"
+        },
+        {
+            "title": "Volleyball"
+        },
+        {
+            "title": "Volleyball"
+        },
+        {
+            "title": "Volleyball"
+        },
+        {
+            "title": "Volleyball"
+        },
+        {
+            "title": "Volleyball"
+        },
+        {
+            "title": "Volleyball"
+        }
+    ],
+    "languages": [{
+            "title": "English",
+            "code": "en",
+            "supported": true
+        },
+        {
+            "title": "Spanish",
+            "code": "es",
+            "supported": true
+        },
+        {
+            "title": "Chinese",
+            "code": "zh",
+            "supported": true
+        },
+        {
+            "title": "Japanese",
+            "code": "ja",
+            "supported": true
+        }
+    ]
+}

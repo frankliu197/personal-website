@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
-import About from '../views/About.vue'
+import Piano from '../views/Piano.vue'
+import NotFound from '../views/NotFound.vue'
 
 Vue.use(VueRouter)
 
@@ -13,9 +14,13 @@ const routes: Array<RouteConfig> = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    component: About
+    path: '/piano',
+    name: 'Piano',
+    component: Piano
+  },
+  {
+    path: '*',
+    component: NotFound
   }
 ]
 

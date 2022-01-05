@@ -41,6 +41,12 @@ export default Vue.extend({
   },
   "es" : {
     "contact-me": "Contáctame"
+  },
+  "ja" : {
+    "contact-me": "連絡"
+  },
+  "zh" : {
+    "contact-me": "联系我"
   }
 }
 </i18n>

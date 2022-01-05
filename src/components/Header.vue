@@ -2,8 +2,14 @@
 .header
   v-app-bar(fixed)
     v-btn.home-button.navbar-link.secondary--text(text)
-        v-toolbar-title Frank Liu
-    v-toolbar-items.ml-4
+      v-toolbar-title Frank Liu
+    div(v-if="this.$router.currentRoute.name === 'Home'")
+      v-toolbar-items.ml-4
+    v-spacer
+    LocaleSelector
+    
+
+//    v-toolbar-items.ml-4
       v-btn.navbar-link.secondary--text(
         class="hidden-sm-and-down"
         :class="scrollTop >= windowHeight-64 && scrollTop < windowHeight+aboutHeight-64 && !contactStatus ? 'active':''"
@@ -73,12 +79,15 @@
 </template>
 
 
-<script>
+<script lang="ts">
 import Vue from "vue"
 
+import LocaleSelector from "@/components/LocaleSelector.vue"
 export default Vue.extend({
   name: "Header",
-  components: {},
+  components: {
+    LocaleSelector
+  },
   data: () => ({}),
 });
 </script>

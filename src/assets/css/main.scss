@@ -15,3 +15,24 @@
     height: 100vh;
     width: 100vw;
 }
+
+.y-spacer {
+    width: 0.8em;
+    height: 1.5em;
+    display: block;
+}
+
+.x-spacer {
+    width: 0.8em;
+    height: 1.5em;
+    display: inline-block;
+}
+
+.dark-italic {
+    font-style: italic;
+    color: #191d20e1 !important;
+}
+.light-italic {
+    font-style: italic;
+    color: #191d20b0 !important;
+}
