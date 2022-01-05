@@ -1,17 +1,16 @@
 <template lang="pug">
-.locale-selector
-  v-menu(open-on-hover bottom offset-y)
-    template(v-slot:activator='{ on, attrs }')
-      v-btn(text v-bind='attrs' v-on='on') 
-        country-flag.flag-margin(:country="localeList[$root.$i18n.locale]")
-        .x-spacer
-        span.locale-font {{ $root.$i18n.locale }}
-    v-list
-      v-list-item-group(v-model="$root.$i18n.locale"  mandatory)
-        v-list-item(v-for='lang in Object.keys(localeList)' :key='lang' :value="lang")
-            country-flag.flag-margin(:country="localeList[lang]") 
-            .x-spacer
-            span.locale-font {{ lang.toUpperCase() }}
+v-menu.locale-selector(open-on-hover bottom offset-y)
+  template(v-slot:activator='{ on, attrs }')
+    v-btn(text v-bind='attrs' v-on='on') 
+      country-flag.flag-margin(:country="localeList[$root.$i18n.locale]")
+      .x-spacer
+      span.locale-font {{ $root.$i18n.locale }}
+  v-list
+    v-list-item-group(v-model="$root.$i18n.locale"  mandatory)
+      v-list-item(v-for='lang in Object.keys(localeList)' :key='lang' :value="lang")
+          country-flag.flag-margin(:country="localeList[lang]") 
+          .x-spacer
+          span.locale-font {{ lang.toUpperCase() }}
 </template>
 
 <script lang="ts">

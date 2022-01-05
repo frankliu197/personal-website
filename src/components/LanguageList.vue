@@ -37,7 +37,7 @@ export default Vue.extend({
   computed: {
     cardDimensions() : any {
       
-      let width = this.width / floor(this.width / CARD_WIDTH)
+      let width = (this.width - 1) / floor(this.width / CARD_WIDTH)
       return {
         width,
         "min-width": CARD_MIN_WIDTH

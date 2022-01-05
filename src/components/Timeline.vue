@@ -12,7 +12,7 @@
               span
                 span.text-h6.f-main  {{ item.title }}
                 .x-spacer
-                span.text-body-2.f-sub.mb-1 {{ item.start }} - {{ item.end }}
+                span.text-body-2.f-sub.mb-1.subtitle {{ item.start }} - {{ item.end }}
               v-spacer
               TimelineIcons(:item="item")
           template(v-else)
@@ -26,7 +26,6 @@
             i18n(:path="kebabCase(item.title) + '.description'" tag="span" "class"="text-body-2 f-sub") 
               br
 </template>
-
 <script lang="ts">
 import { kebabCase } from "lodash";
 import TimelineIcons from "@/mini-components/TimelineIcons.vue"
@@ -57,6 +56,9 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .v-card {
   text-align: left;
+}
+.subtitle {
+  color: rgba(0, 0, 0, 0.6);
 }
 </style>
 

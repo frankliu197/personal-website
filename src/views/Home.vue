@@ -3,6 +3,7 @@
   Carousel
   About
   Portfolio
+  Footer
 </template>
 
 <script lang="ts">

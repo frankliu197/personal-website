@@ -2,7 +2,7 @@
 .card-list(ref="container")
   template(v-for="item in items")
     v-hover(v-slot="{ hover }")
-      v-card.item-card(rounded=0 :width="width / (width / CARD_WIDTH)")
+      v-card.item-card(rounded=0 v-bind="cardWidth")
         v-img(:src="require(`@/assets/portfolio/${item.title}.jpg`)" alt="" height="250px")
         v-card-title.text-h4 {{ $t(item.title + ".name" ) }}
         v-card-text.dark-italic.text-h6 {{ $t(item.title + ".description") }}
@@ -16,6 +16,7 @@ import { kebabCase, floor } from "lodash";
 import Vue from 'vue';
 
 const CARD_WIDTH = 300
+const CARD_MIN_WIDTH = 200
 export default Vue.extend({
   name: 'CardList',
   props: {
@@ -28,13 +29,17 @@ export default Vue.extend({
       required: true
     }
   },
-  data: () => ({
-    CARD_WIDTH
-  }),
   methods: {
     kebabCase
   },
   computed: {
+    cardWidth() : any {
+      let width = (this.width - 1) / floor(this.width / CARD_WIDTH)
+      return {
+        width,
+        "min-width": CARD_MIN_WIDTH
+      }
+    }
   }
 });
 

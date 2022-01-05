@@ -3,8 +3,9 @@ v-app
   Header
   v-main
     router-view
-  Footer
   Contact
+  
+  Footer
 </template>
 
 <script lang="ts">
@@ -33,7 +34,8 @@ a {
 
 .anchor-tag {
   position: relative;
-  top: -54px;
+  top: -56px;
+  //top: -45px;
 }
 
 html {

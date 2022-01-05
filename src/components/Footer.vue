@@ -1,9 +1,12 @@
 <template lang="pug">
 .footer
-  v-footer(padless)
-    v-card.indigo(flat tile min-height="150px")
-      v-card-text
+  v-footer(v-if="route === 'Home'" padless)
+    v-container(fluid )
+      .horizontal-aligner
         v-btn(x-large @click="toggleContact") {{ $t("contact-me") }}
+  template(v-if="route === 'Piano'")
+  v-footer(v-else)
+  
 </template>
 
 <script lang="ts">
@@ -11,11 +14,19 @@ import Vue from 'vue';
 import emitter from "@/services/emitter"
 export default Vue.extend({
   name: 'Footer',
-  data: () => ({
-  }),
+  data: function() {
+    return {
+      route: this.$router.currentRoute.name
+    }
+  },
   methods: {
     toggleContact(){
       emitter.emit('toggleContact');
+    }
+  },
+  watch: {
+    $route(to, from) {
+      this.route = to.name 
     }
   }
 });
