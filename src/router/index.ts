@@ -11,16 +11,25 @@ const routes: Array<RouteConfig> = [
     path: '/',
     alias: '/home',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: {
+      defaultHeader: false,
+    }
   },
   {
     path: '/piano',
     name: 'Piano',
-    component: Piano
+    component: Piano,
+    meta: {
+      defaultHeader: true,
+    }
   },
   {
     path: '*',
-    component: NotFound
+    component: NotFound,
+    meta: {
+      defaultHeader: true,
+    }
   }
 ]
 

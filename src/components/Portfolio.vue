@@ -4,12 +4,6 @@
   v-container.py-16.px-10(fluid)
     div(ref="container" v-resize="() => {this.width = this.$refs.container.clientWidth}")
       p.text-h3.f-title {{ $t('title') }}
-      i18n(path="main" tag="span" "class"="text-h6 f-main") 
-        br
-      .y-spacer
-      i18n(path="sub" tag="span" "class"="text-body-2 f-sub") 
-        br
-      .y-spacer
       v-tabs(v-model="tabIndex" v-bind="vTabProps")
         v-tabs-slider(color="accent lighten-3")
         template(v-for="(tab, index) in Object.keys(tabItems)" top)
@@ -55,6 +49,11 @@ export default Vue.extend({
     width: 0
   }),
   methods: {
+  },
+  watch: {
+    tabIndex: function() {
+      this.$emit('onTabChange', {tabIndex: this.tabIndex})
+    }
   }
 });
 

@@ -1,15 +1,12 @@
 <template lang="pug">
 v-app
-  Header
+  Header(v-if="$route.meta.defaultHeader")
   v-main
     router-view
   Contact
-  
-  Footer
 </template>
 
 <script lang="ts">
-import Footer from './components/Footer.vue'
 import Header from './components/Header.vue'
 import Vue from 'vue';
 import Contact from '@/components/Contact.vue'
@@ -17,7 +14,6 @@ export default Vue.extend({
   name: 'App',
   components: {
     Contact,
-    Footer,
     Header
   },
   data: () => ({
@@ -28,18 +24,5 @@ export default Vue.extend({
 
 <style lang='scss'>
 
-a {
-    text-decoration: none;
-}
-
-.anchor-tag {
-  position: relative;
-  top: -56px;
-  //top: -45px;
-}
-
-html {
-        scroll-behavior: smooth;
-    }
 
 </style>

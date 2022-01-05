@@ -1,7 +1,7 @@
 <template lang="pug">
 .footer
   v-footer(v-if="route === 'Home'" padless)
-    v-container(fluid )
+    v-container(fluid)
       .horizontal-aligner
         v-btn(x-large @click="toggleContact") {{ $t("contact-me") }}
   template(v-if="route === 'Piano'")
@@ -38,11 +38,7 @@ export default Vue.extend({
   text-align: center;
 }
 
-@media screen and (max-height: 700px) {
-  .v-footer {
-    height: 150px;
-  }
-}
+
 </style>
 
 <i18n>

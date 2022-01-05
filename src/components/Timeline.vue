@@ -12,7 +12,8 @@
               span
                 span.text-h6.f-main  {{ item.title }}
                 .x-spacer
-                span.text-body-2.f-sub.mb-1.subtitle {{ item.start }} - {{ item.end }}
+                span.text-body-2.f-sub.mb-1.subtitle {{ item.start }}
+                span.text-body-2.f-sub.mb-1.subtitle(v-if="item.end")  - {{ item.end }}
               v-spacer
               TimelineIcons(:item="item")
           template(v-else)
@@ -21,10 +22,11 @@
               v-spacer
               TimelineIcons(:item="item")
             v-card-subtitle
-              span.text-body-2.f-sub {{ item.start }} - {{ item.end }}
+              span.text-body-2.f-sub.mb-1.subtitle {{ item.start }}
+              span.text-body-2.f-sub.mb-1.subtitle(v-if="item.end")  - {{ item.end }}
           v-card-text.pt-0
-            i18n(:path="kebabCase(item.title) + '.description'" tag="span" "class"="text-body-2 f-sub") 
-              br
+            i18n(:path="'portfolio.' + item.title + '.description[0]'" tag="ul" "class"="text-body-2 f-sub") 
+              
 </template>
 <script lang="ts">
 import { kebabCase } from "lodash";

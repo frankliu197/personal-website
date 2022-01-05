@@ -1,0 +1,9 @@
+{
+    "portfolio": {
+        "Kinaxis": {
+            "description": [
+                "Led development of a website written in Vue, Express, and SQLite which fetches datasets, and creates graphs through the Elastic Stack endpoints and visualizes them on a dashboard"
+            ]
+        }
+    }
+}

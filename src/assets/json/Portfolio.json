@@ -26,12 +26,18 @@
 
     ],
     "projects": [{
-        "title": "Chess Learning Program",
-        "start": "September 2016",
-        "end": "June 2017",
-        "link": "#",
-        "github": "https://github.com/frankliu197/Chess-Learning-Program"
-    }],
+            "title": "This Website",
+            "start": "January 2022",
+            "link": "#",
+            "github": "https://github.com/frankliu197/personal-website"
+        },
+        {
+            "title": "Chess Learning Program",
+            "start": "September 2016",
+            "end": "June 2017",
+            "github": "https://github.com/frankliu197/Chess-Learning-Program"
+        }
+    ],
     "skills": [],
     "hobbies": [{
             "title": "Piano",
