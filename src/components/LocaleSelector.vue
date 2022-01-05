@@ -2,7 +2,7 @@
 .locale-selector
   v-menu(open-on-hover bottom offset-y)
     template(v-slot:activator='{ on, attrs }')
-      v-btn(v-bind='attrs' v-on='on') 
+      v-btn(text v-bind='attrs' v-on='on') 
         country-flag.flag-margin(:country="localeList[$root.$i18n.locale]")
         .x-spacer
         span.locale-font {{ $root.$i18n.locale }}
@@ -34,7 +34,7 @@ export default Vue.extend({
 }
 
 .flag-margin {
-  margin-bottom: 1px;
+  margin-bottom: 1px!important;
 }
 </style>
 

@@ -1,13 +1,30 @@
 <template lang="pug">
-.header
+.header(ref="container" v-resize="() => {width = $refs.container.clientWidth}")
   v-app-bar(fixed)
-    v-btn.home-button.navbar-link.secondary--text(text)
+    v-btn.home-button.secondary--text(text)
       v-toolbar-title Frank Liu
-    div(v-if="this.$router.currentRoute.name === 'Home'")
-      v-toolbar-items.ml-4
+    template(v-if="home && !collapseNavBar")
+      v-btn(text href="#about") About
+      v-btn(text href="#portfolio") Portfolio
+      v-btn(text @click="emitter.emit('toggleContact')") Contact
     v-spacer
     LocaleSelector
     
+    template(v-if="home && collapseNavBar")
+      v-divider(vertical)
+      v-app-bar-nav-icon(@click="showNavDrawer = true")
+  v-navigation-drawer(app temporary right v-model="showNavDrawer" v-bind="navDrawDimensions"  v-resize="() => {showNavDrawer = collapseNavBar && showNavDrawer}")
+    v-list
+        v-list-item
+          v-list-item-title.text-h6 MENU
+    v-divider
+    v-list
+      v-list-item
+        v-btn(text href="#about") About
+      v-list-item
+        v-btn(text href="#portfolio") Portfolio
+      v-list-item
+        v-btn(text @click="emitter.emit('toggleContact')") Contact
 
 //    v-toolbar-items.ml-4
       v-btn.navbar-link.secondary--text(
@@ -81,31 +98,48 @@
 
 <script lang="ts">
 import Vue from "vue"
-
+const MIN_NAVDRAW_WIDTH = 300
 import LocaleSelector from "@/components/LocaleSelector.vue"
+import emitter from "@/services/emitter"
 export default Vue.extend({
   name: "Header",
   components: {
     LocaleSelector
   },
-  data: () => ({}),
+  data: function() {
+    return {
+      width: 0,
+      showNavDrawer: false,
+      home: this.$router.currentRoute.name === 'Home',
+      emitter
+    }
+  },
+  methods: {
+  },
+  computed: {
+    navDrawDimensions() : any {
+      return {
+        width: this.width / 3 > MIN_NAVDRAW_WIDTH? this.width: MIN_NAVDRAW_WIDTH,
+      }
+    },
+    collapseNavBar(): boolean {
+      return this.width < 960
+    }
+  },
+  watch: {
+    $route(to, from) {
+      this.home = to.name === 'Home'
+    }
+  }
 });
 </script>
 
 <style scoped>
-.container {
-  padding: 0px;
+.v-list-item .v-btn {
+  width: 100%;
 }
-.active.navbar-link::before {
-  opacity: 0.24 !important;
-}
-.nav-divider {
-  border: none !important;
-  border-color: transparent !important;
-}
-.sidenav-divider {
-  border: solid !important;
-  border-width: thin 0 0 0 !important;
-  border-color: var(--v-secondary-base) !important;
+
+.v-list-item .v-list-item__title {
+  text-align: center;
 }
 </style>

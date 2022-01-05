@@ -7,27 +7,19 @@
           v-avatar
             img(:src="require(`@/assets/portfolio/${item.title}.jpg`)")
         v-card.elevation-2
-          span(v-if="width > 680")
+          template(v-if="width > 680")
             v-card-title.horizontal-aligner
               span
                 span.text-h6.f-main  {{ item.title }}
                 .x-spacer
                 span.text-body-2.f-sub.mb-1 {{ item.start }} - {{ item.end }}
               v-spacer
-              v-tooltip(top)
-                template(v-slot:activator="{ on, attrs }")
-                  v-btn.mt-n2(v-on="on" v-bind="attrs" :href="item.website" target="_blank" icon style="align-self: flex-start;")
-                    v-icon(size="small") mdi-open-in-new
-                span {{ $t("visit") }}
-          span(v-else)
+              TimelineIcons(:item="item")
+          template(v-else)
             v-card-title.horizontal-aligner
               span.text-h6.f-main  {{ item.title }}
               v-spacer
-              v-tooltip(top)
-                template(v-slot:activator="{ on, attrs }")
-                  v-btn.mt-n2(v-on="on" v-bind="attrs" :href="item.website" target="_blank" icon style="align-self: flex-start;")
-                    v-icon(size="small") mdi-open-in-new
-                span {{ $t("visit") }}
+              TimelineIcons(:item="item")
             v-card-subtitle
               span.text-body-2.f-sub {{ item.start }} - {{ item.end }}
           v-card-text.pt-0
@@ -37,10 +29,14 @@
 
 <script lang="ts">
 import { kebabCase } from "lodash";
+import TimelineIcons from "@/mini-components/TimelineIcons.vue"
 import Vue from 'vue';
 
 export default Vue.extend({
   name: 'Timeline',
+  components: {
+    TimelineIcons
+  },
   props: {
     width: {
       type: Number,

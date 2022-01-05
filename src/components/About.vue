@@ -1,5 +1,6 @@
 <template lang="pug">
 .about
+  span.anchor-tag(id="about")
   v-container.py-16.px-10.background(fluid)
     p.text-h3.f-title {{ $t('title') }}
     v-row.mt-4

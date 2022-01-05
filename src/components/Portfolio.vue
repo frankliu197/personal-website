@@ -1,7 +1,8 @@
 <template lang="pug">
 .portfolio
+  span.anchor-tag(id="portfolio")
   v-container.py-16.px-10(fluid)
-    div(ref="container" v-resize="onResize")
+    div(ref="container" v-resize="() => {this.width = this.$refs.container.clientWidth}")
       p.text-h3.f-title {{ $t('title') }}
       i18n(path="main" tag="span" "class"="text-h6 f-main") 
         br
@@ -11,10 +12,8 @@
       .y-spacer
       v-tabs(v-model="tabIndex" v-bind="vTabProps")
         v-tabs-slider(color="accent lighten-3")
-        v-tooltip(v-for="(tab, index) in Object.keys(tabItems)" :key="tab" top)
-          template(v-slot:activator="{ on, attrs }")
-            v-tab(v-bind="attrs" v-on="on") {{ $t(tab + ".name") }}
-          span {{ tabIndex === index ? $t(tab + ".active") : $t(tab + ".passive")}}
+        template(v-for="(tab, index) in Object.keys(tabItems)" top)
+          v-tab(:key="tab") {{ $t(tab + ".name") }}
       v-tabs-items(v-model="tabIndex")
         v-tab-item(v-for="tab in Object.keys(tabItems)" :key="tab")
           component(:is="tabItems[tab]" :items="portfolioData[tab]" :width="width")
@@ -56,9 +55,6 @@ export default Vue.extend({
     width: 0
   }),
   methods: {
-    onResize(){
-      this.width = (this.$refs.container as HTMLDivElement).clientWidth
-    }
   }
 });
 

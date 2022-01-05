@@ -30,4 +30,14 @@ export default Vue.extend({
 a {
     text-decoration: none;
 }
+
+.anchor-tag {
+  position: relative;
+  top: -54px;
+}
+
+html {
+        scroll-behavior: smooth;
+    }
+
 </style>

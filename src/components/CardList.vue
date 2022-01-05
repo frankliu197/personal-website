@@ -1,21 +1,21 @@
 <template lang="pug">
 .card-list(ref="container")
-  div(v-for="item in items" :key="item.title")
+  template(v-for="item in items")
     v-hover(v-slot="{ hover }")
-      v-card.item-card(rounded=0 v-bind="cardWidth")
+      v-card.item-card(rounded=0 :width="width / (width / CARD_WIDTH)")
         v-img(:src="require(`@/assets/portfolio/${item.title}.jpg`)" alt="" height="250px")
         v-card-title.text-h4 {{ $t(item.title + ".name" ) }}
         v-card-text.dark-italic.text-h6 {{ $t(item.title + ".description") }}
         v-fade-transition(v-if="item.link")
           v-overlay(v-if="hover" absolute color="primary")
-            v-btn(:href="item.link") More info
+            v-btn(:href="item.link") {{ $t("more-info")}}
 </template>
 
 <script lang="ts">
 import { kebabCase, floor } from "lodash";
 import Vue from 'vue';
 
-const CARD_WIDTH = 275
+const CARD_WIDTH = 300
 export default Vue.extend({
   name: 'CardList',
   props: {
@@ -28,18 +28,13 @@ export default Vue.extend({
       required: true
     }
   },
+  data: () => ({
+    CARD_WIDTH
+  }),
   methods: {
     kebabCase
   },
   computed: {
-    cardWidth() : any {
-      
-      let width = this.width / floor(this.width / CARD_WIDTH)
-      return {
-        width,
-        "min-width": width / 5
-      }
-    }
   }
 });
 
