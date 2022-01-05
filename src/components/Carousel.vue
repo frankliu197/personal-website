@@ -14,7 +14,7 @@
                 span.website-subtitle More about me below
             div(style="height:2vh")
             .inline-text
-                v-btn.title-button(icon rounded)
+                v-btn.title-button(icon rounded href="#about")
                     v-icon mdi-arrow-down
 </template>
 
