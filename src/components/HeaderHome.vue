@@ -10,6 +10,7 @@
         v-btn(text @click="emitter.emit('toggleContact')") Contact
     v-spacer
     v-toolbar-items
+      ThemeToggler(:dark="true")
       LocaleSelector
       template(v-if="collapseNavBar")
         v-divider(vertical)
@@ -33,12 +34,14 @@ import Vue from "vue"
 const MIN_NAVDRAW_WIDTH = 300
 const COLLAPSE_NAV_BAR_WIDTH = 600
 const HEADER_HEIGHT = 56;
+import ThemeToggler from "@/components/ThemeToggler.vue"
 import LocaleSelector from "@/components/LocaleSelector.vue"
 import emitter from "@/services/emitter"
 export default Vue.extend({
   name: "Header",
   components: {
-    LocaleSelector
+    LocaleSelector,
+    ThemeToggler
   },
   props: {
     menuItems: Array as () => any[]
