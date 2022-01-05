@@ -1,7 +1,7 @@
 <template lang="pug">
 .header-home(ref="container" v-resize="onResize")
   v-app-bar(fixed v-scroll="onScroll")
-    v-btn.secondary--text(text href="/")
+    v-btn.secondary--text(text @click="scrollToTop")
       v-app-bar-title Frank Liu
     v-toolbar-items
       template(v-if="!collapseNavBar" )
@@ -20,10 +20,9 @@
           v-list-item-title.text-h6 MENU
     v-divider
     v-list
-      v-list-item
-        v-btn(text href="#about") About
-      v-list-item
-        v-btn(text href="#portfolio") Portfolio
+      template(v-for="item of menuItems")
+        v-list-item
+          v-btn(text :href="'#' + item.title.toLowerCase()" :class="navBtnClass(item)") {{ item.title }}
       v-list-item
         v-btn(text @click="emitter.emit('toggleContact')") Contact
 </template>
@@ -53,6 +52,9 @@ export default Vue.extend({
     }
   },
   methods: {
+    scrollToTop(){
+      window.scrollTo(0,0)
+    },
     onScroll(){
       this.scrollTop = document.documentElement.scrollTop
     },

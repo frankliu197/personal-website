@@ -12,6 +12,5 @@ module.exports = {
             includeLocales: false,
             enableBridge: true
         }
-    },
-    publicPath: '/project name/'
+    }
 }
