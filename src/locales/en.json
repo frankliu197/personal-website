@@ -36,8 +36,10 @@
             "experiences": "Experiences",
             "projects": "Projects",
             "technologies": "Technologies",
+            "awards": "Awards",
             "hobbies": "Hobbies",
             "languages": "Languages"
         }
+
     }
 }

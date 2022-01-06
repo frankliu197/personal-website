@@ -18,6 +18,7 @@ import Vue from 'vue';
 import Timeline from "@/components/Timeline.vue";
 import CardList from "@/components/CardList.vue";
 import LanguageList from "@/components/LanguageList.vue";
+import CardListBasic from "@/components/CardListBasic.vue"
 let vTabProps = {
   "fixed-tabs": true,
   "next-icon": "mdi-arrow-right-bold-box-outline",
@@ -28,9 +29,10 @@ let vTabProps = {
 let tabItems = {
   experiences: "Timeline",
   projects: "Timeline",
-  technologies: "CardList",
+  technologies: "CardListBasic",
+  awards: "CardListBasic",
   hobbies: "CardList",
-  languages: "LanguageList"
+  languages: "LanguageList",
 }
 
 import portfolioData from "@/assets/json/Portfolio.json"
@@ -39,7 +41,8 @@ export default Vue.extend({
   components: {
     Timeline,
     CardList,
-    LanguageList
+    LanguageList,
+    CardListBasic
   },
   data: () => ({
     tabIndex: 0,

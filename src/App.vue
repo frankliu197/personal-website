@@ -55,32 +55,32 @@ export default Vue.extend({
   //alias for .text-body-2
   // used for all subtitles in cards 
       font-size: 0.875rem !important;
-    font-weight: 400;
-    line-height: 1.25rem;
+    font-weight: 400  !important;
+    line-height: 1.25rem  !important;
     letter-spacing: 0.0178571429em !important;
     font-family: "Roboto", sans-serif !important;
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.6)  !important;
   }
 
   .f-sub-bold {
   //alias for .text-body-2
   // used for all subtitles in cards 
       font-size: 0.875rem !important;
-    font-weight: 400;
-    line-height: 1.25rem;
+    font-weight: 400 !important;
+    line-height: 1.25rem !important;
     letter-spacing: 0.0178571429em !important;
     font-family: "Roboto", sans-serif !important;
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(0, 0, 0, 0.87) !important;
   }
 
   .f-main {
     //alias for .text-h6
         font-size: 1.25rem !important;
-    font-weight: 500;
-    line-height: 2rem;
+    font-weight: 500  !important;
+    line-height: 2rem  !important;
     letter-spacing: 0.0125em !important;
     font-family: "Roboto", sans-serif !important;
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(0, 0, 0, 0.87)  !important;
   }
 
 .v-card.text-center .v-card__title {

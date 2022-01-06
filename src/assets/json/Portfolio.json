@@ -37,7 +37,32 @@
             "github": "https://github.com/frankliu197/Chess-Learning-Program"
         }
     ],
-    "technologies": [],
+    "technologies": [{
+        "title": "Programming Languages",
+        "description": "JavaScript/TypeScript, Python, Java, Bash, C/C++"
+    }, {
+        "title": "Web Development",
+        "description": "React/Vue/Angular, JavaScript/Typescript, Express.js, Spring, Node.js, HTML/CSS"
+    }, {
+        "title": "Databases",
+        "description": "SQL, NoSQL, SQLite, MongoDB, CouchDB"
+    }, {
+        "title": "Tools",
+        "description": "Git, SQL/NoSQL, Visual Studio, Docker, Kubernetes, Elastic Stack"
+    }],
+    "awards": [{
+            "title": "Nominated for Co-op Student of the Year",
+            "start": "2020",
+            "basic": true
+        },
+        {
+            "title": "Entrance Award, Ontario Professional Engineers Foundation for Education",
+            "start": "2017",
+            "end": "2018",
+            "basic": true
+        }
+
+    ],
     "hobbies": [{
             "title": "Piano",
             "link": "/Piano"
