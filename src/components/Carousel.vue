@@ -85,7 +85,7 @@ export default Vue.extend({
 }
 
 .f-spacer {
-  width: 0.6em;
+  width: calc(2em - 12px);
   display: inline-block;
 }
 

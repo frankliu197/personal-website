@@ -6,9 +6,9 @@
         template(v-slot:icon)
           v-avatar
             img(:src="require(`@/assets/portfolio/${item.title}.jpg`)")
-        v-card.elevation-2
+        v-card.elevation-2.pb-1
           template(v-if="width > 680")
-            v-card-title.horizontal-aligner
+            v-card-title.horizontal-aligner.pb-2
               span
                 span.text-h6.f-main  {{ item.title }}
                 .x-spacer
@@ -21,11 +21,14 @@
               span.text-h6.f-main  {{ item.title }}
               v-spacer
               TimelineIcons(:item="item")
-            v-card-subtitle
+            v-card-subtitle.pb-2
               span.text-body-2.f-sub.mb-1.subtitle {{ item.start }}
               span.text-body-2.f-sub.mb-1.subtitle(v-if="item.end")  - {{ item.end }}
           v-card-text.pt-0
-            i18n(:path="'portfolio.' + item.title + '.description[0]'" tag="ul" "class"="text-body-2 f-sub") 
+            ul(v-html="$t('portfolio.' + item.title + '.description')")
+
+
+            
               
 </template>
 <script lang="ts">

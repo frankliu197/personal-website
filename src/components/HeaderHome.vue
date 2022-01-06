@@ -1,6 +1,6 @@
 <template lang="pug">
 .header-home(ref="container" v-resize="onResize")
-  v-app-bar(fixed v-scroll="onScroll" :class="navBarClass()" :elevation="scrollTop == 0 ? 0:12")
+  v-app-bar(:height="HEADER_HEIGHT" fixed v-scroll="onScroll" :class="navBarClass()" :elevation="scrollTop == 0 ? 0:12")
     v-btn.secondary--text(text @click="scrollToTop")
       v-app-bar-title Frank Liu
     v-toolbar-items
@@ -51,7 +51,8 @@ export default Vue.extend({
       width: 0,
       showNavDrawer: false,
       emitter,
-      scrollTop: 0
+      scrollTop: 0,
+      HEADER_HEIGHT
     }
   },
   methods: {
