@@ -24,5 +24,12 @@ export default Vue.extend({
 
 <style lang='scss'>
 
+.container.main {
+  //alias for .py-16.px-10 and applies to all v-container.main
+  padding-right: 40px !important;
+  padding-left: 40px !important;
+  padding-top: 64px !important;
+  padding-bottom: 64px !important;
 
+}
 </style>

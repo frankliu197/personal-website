@@ -1,6 +1,6 @@
 <template lang="pug">
 .home
-  v-container(fluid )
+  v-container(fluid)
     v-carousel(v-model='model' :height="'calc(90vh - 56px)'")
       v-carousel-item(v-for='elem in elements' :key='elem')
         v-card(tile height="100%")

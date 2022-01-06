@@ -1,7 +1,7 @@
 <template lang="pug">
 .portfolio
   span.anchor-tag(id="portfolio")
-  v-container.py-16.px-10(fluid)
+  v-container.main(fluid)
     div(ref="container" v-resize="() => {this.width = this.$refs.container.clientWidth}")
       p.text-h3.f-title {{ $t('title') }}
       v-tabs(v-model="tabIndex" v-bind="vTabProps")

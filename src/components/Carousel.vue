@@ -6,15 +6,15 @@
             .inline-text
                 template(v-for="(letter, index) in FIRST_NAME")
                     span.website-title.slide-in-from-left(:style="firstName(index)") {{ letter }}
-                span 
+                .f-spacer
                 template(v-for="(letter, index) in LAST_NAME")
                     span.website-title.slide-in-from-left(:style="firstName(index)") {{ letter }}
             div(style="height:5vh")
             .inline-text
-                span.website-subtitle More about me below
+              span.website-subtitle.fade-in More about me below
             div(style="height:2vh")
             .inline-text
-                v-btn.title-button(icon rounded href="#about")
+                v-btn.fade-in.title-button(icon rounded href="#about")
                     v-icon mdi-arrow-down
 </template>
 
@@ -32,12 +32,12 @@ export default Vue.extend({
     methods: {
         firstName(index: number): any {
             return {
-                "animation-delay": (index * 0.25 + 1) + "s"
+                "animation-delay": (index * 0.2 + 0.8) + "s"
             }
         },
         lastName(index: number): any {
             return {
-                "animation-delay": ((index + FIRST_NAME.length) * 0.25 + 1) + "s"
+                "animation-delay": ((index + FIRST_NAME.length) * 0.2 + 0.8) + "s"
             }
         }
     }
@@ -59,7 +59,7 @@ export default Vue.extend({
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 6px;
 }
 
 .title-button {
@@ -84,6 +84,11 @@ export default Vue.extend({
     }
 }
 
+.f-spacer {
+  width: 0.6em;
+  display: inline-block;
+}
+
 .website-subtitle {
     color: var(--v-secondary-base);
     font-size: 1.25rem !important;
@@ -92,31 +97,8 @@ export default Vue.extend({
     //alias .text-h6
 }
 
-.slide-in-from-left {
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    animation-name: slideInFromLeft;
-    animation-delay: 1s;
+.fade-in {
+  animation-delay: 3s;
 }
 
-@keyframes slideInFromLeft {
-    0% {
-        transform: translateX(100vw);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInFromRight {
-    0% {
-        transform: translateX(-100vw);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
 </style>

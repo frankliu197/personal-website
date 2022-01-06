@@ -1,6 +1,6 @@
 <template lang="pug">
 .header-home(ref="container" v-resize="onResize")
-  v-app-bar(fixed v-scroll="onScroll")
+  v-app-bar(fixed v-scroll="onScroll" :class="navBarClass()" :elevation="scrollTop == 0 ? 0:12")
     v-btn.secondary--text(text @click="scrollToTop")
       v-app-bar-title Frank Liu
     v-toolbar-items
@@ -69,6 +69,13 @@ export default Vue.extend({
         return 'active'
       }
       return  ""
+    },
+    navBarClass() : string{
+      if (this.scrollTop < this.menuItems[0].top - HEADER_HEIGHT){
+        return "transparent"
+      } else {
+        return ""
+      }
     }
   },
   computed: {
@@ -106,5 +113,9 @@ export default Vue.extend({
   text-align: center;
 }
 
+.transparent {
+  color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
 
 </style>

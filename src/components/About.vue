@@ -1,12 +1,12 @@
 <template lang="pug">
 .about
     span.anchor-tag(id="about")
-    v-container.py-16.px-10.background(fluid)
-        p.text-h3.f-title {{ $t('title') }}
+    v-container.main.background(fluid)
+        p.text-h3.f-title.text-center {{ $t('title') }}
         v-row.mt-4
-            v-col(offset=1 sm=4 cols=3)
+            v-col(sm=5 offset-sm=0 offset=2 cols=8)
                 v-img.default(src="@/assets/images/fred.jpg")
-            v-col(offset=1 sm=6 cols=7)
+            v-col(offset-sm=1 sm=6 offset=0 cols=12)
                 i18n(path="main" tag="span" "class"="text-h6 f-main") 
                     br
                 .y-spacer
@@ -33,19 +33,7 @@ export default Vue.extend({
     background-size: cover;
 }
 
-.default {
-    transform: translateX(-100%);
-}
 
-.slide-in-from-left {
-    transform: translateX(0%) !important;
-    transition: transform 2s ease;
-}
-
-.fade-in-section.is-visible-delay-2 {
-    opacity: 1;
-    transition-delay: 2s;
-}
 
 .about {
     line-height: 3.125rem;
