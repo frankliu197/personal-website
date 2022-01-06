@@ -1,6 +1,6 @@
 <template lang="pug">
 .header(ref="container" v-resize="onResize")
-  v-app-bar(fixed v-scroll="onScroll")
+  v-app-bar(:height="HEADER_HEIGHT" fixed v-scroll="onScroll")
     v-btn.secondary--text(text href="/")
       v-app-bar-title Frank Liu
     v-toolbar-items
@@ -13,13 +13,19 @@
 
 
 <script lang="ts">
+
+const HEADER_HEIGHT = 56;
 import Vue from "vue"
 import LocaleSelector from "@/components/LocaleSelector.vue"
 export default Vue.extend({
   name: "Header",
   components: {
     LocaleSelector
-  }
+  },
+  data: () => ({
+    
+    HEADER_HEIGHT
+  })
 });
 </script>
 
@@ -40,22 +46,3 @@ export default Vue.extend({
 
 </style>
 
-<i18n>
-{
-  "en": {
-    "about": "About",
-    "portfolio": "Portfolio",
-    "contact": "Contact",
-    "menu": "Menu"
-  },
-  "es" : {
-    "contact-me": "Contáctame"
-  },
-  "ja" : {
-    "contact-me": "連絡"
-  },
-  "zh" : {
-    "contact-me": "联系我"
-  }
-}
-</i18n>
