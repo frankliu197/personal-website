@@ -5,7 +5,7 @@
     p.f-title.text-center {{ $t('title') }}
     v-row.mt-4
       v-col(sm=5, offset-sm=0, offset=2, cols=8)
-        v-img.default(src="@/assets/images/fred.jpg")
+        v-img.default(src="@/assets/images/Frank.jpg")
       v-col(offset-sm=1, sm=6, offset=0, cols=12)
         span.f-main {{ $t('description-main') }}
         .y-spacer
