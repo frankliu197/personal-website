@@ -20,7 +20,7 @@
               span.f-main  {{ item.title }}
               v-spacer
               TimelineIcons(:item="item")
-            v-card-title.mb-0(v-if="item.role" style="margin-top: -35px")
+            v-card-title.mb-0(style="margin-top: -35px")
               span.f-sub-bold {{ $t('portfolio.' + item.title + ".role" )}}
           v-card-subtitle.pt-0.pb-2
             span.f-sub {{ item.start }}
