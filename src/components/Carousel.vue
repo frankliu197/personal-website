@@ -11,7 +11,7 @@
                     span.website-title.slide-in-from-left(:style="firstName(index)") {{ letter }}
             div(style="height:5vh")
             .inline-text
-              span.website-subtitle.fade-in More about me below
+              span.website-subtitle.fade-in {{ $t("more")}}
             div(style="height:2vh")
             .inline-text
                 v-btn.fade-in.title-button(icon rounded href="#about")
@@ -102,3 +102,11 @@ export default Vue.extend({
 }
 
 </style>
+
+<i18n>
+{
+  "en": {
+    "more": "More About Me Below"
+  }
+}
+</i18n>

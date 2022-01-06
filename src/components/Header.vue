@@ -39,3 +39,23 @@ export default Vue.extend({
 
 
 </style>
+
+<i18n>
+{
+  "en": {
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "menu": "Menu"
+  },
+  "es" : {
+    "contact-me": "Contáctame"
+  },
+  "ja" : {
+    "contact-me": "連絡"
+  },
+  "zh" : {
+    "contact-me": "联系我"
+  }
+}
+</i18n>

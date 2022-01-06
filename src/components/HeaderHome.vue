@@ -1,16 +1,16 @@
 <template lang="pug">
-.header-home(ref="container" v-resize="onResize")
+.header-home.header(ref="container" v-resize="onResize")
   v-app-bar(:height="HEADER_HEIGHT" fixed v-scroll="onScroll" :class="navBarClass()" :elevation="scrollTop == 0 ? 0:12")
     v-btn.secondary--text(text @click="scrollToTop")
       v-app-bar-title Frank Liu
     v-toolbar-items
       template(v-if="!collapseNavBar" )
         template(v-for="item of menuItems")
-          v-btn(text :href="'#' + item.title.toLowerCase()" :class="navBtnClass(item)") {{ item.title }}
-        v-btn(text @click="emitter.emit('toggleContact')") Contact
+          v-btn(text :href="'#' + item.title.toLowerCase()" :class="navBtnClass(item)") {{ $t(item.title) }}
+        v-btn(text @click="emitter.emit('toggleContact')") {{$t("Contact")}}
     v-spacer
     v-toolbar-items
-      ThemeToggler(:dark="true")
+      //ThemeToggler(:dark="true")
       LocaleSelector
       template(v-if="collapseNavBar")
         v-divider(vertical)
@@ -18,14 +18,14 @@
   v-navigation-drawer(app temporary right v-model="showNavDrawer" v-bind="navDrawDimensions"  v-resize="() => {showNavDrawer = collapseNavBar && showNavDrawer}")
     v-list
         v-list-item
-          v-list-item-title.text-h6 MENU
+          v-list-item-title.text-h6 {{$t("Menu")}}
     v-divider
     v-list
       template(v-for="item of menuItems")
         v-list-item
-          v-btn(text :href="'#' + item.title.toLowerCase()" :class="navBtnClass(item)") {{ item.title }}
+          v-btn(text :href="'#' + item.title.toLowerCase()" :class="navBtnClass(item)") {{ $t(item.title) }}
       v-list-item
-        v-btn(text @click="emitter.emit('toggleContact')") Contact
+        v-btn(text @click="emitter.emit('toggleContact')") {{$t("Contact")}}
 </template>
 
 
@@ -38,7 +38,7 @@ import ThemeToggler from "@/components/ThemeToggler.vue"
 import LocaleSelector from "@/components/LocaleSelector.vue"
 import emitter from "@/services/emitter"
 export default Vue.extend({
-  name: "Header",
+  name: "HeaderHome",
   components: {
     LocaleSelector,
     ThemeToggler
@@ -120,3 +120,23 @@ export default Vue.extend({
 }
 
 </style>
+
+<i18n>
+{
+  "en": {
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "menu": "Menu"
+  },
+  "es" : {
+    "contact-me": "Contáctame"
+  },
+  "ja" : {
+    "contact-me": "連絡"
+  },
+  "zh" : {
+    "contact-me": "联系我"
+  }
+}
+</i18n>

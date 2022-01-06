@@ -4,8 +4,8 @@
     v-hover(v-slot="{ hover }")
       v-card.item-card(rounded=0 v-bind="cardWidth")
         v-img(:src="require(`@/assets/portfolio/${item.title}.jpg`)" alt="" height="250px")
-        v-card-title.text-h4 {{ $t(item.title + ".name" ) }}
-        v-card-text.dark-italic.text-h6 {{ $t(item.title + ".description") }}
+        v-card-title.f-title-small {{ $t("portfolio." + item.title + ".title" ) }}
+        v-card-text.dark-italic.f-sub {{ $t("portfolio." + item.title + ".description") }}
         v-fade-transition(v-if="item.link")
           v-overlay(v-if="hover" absolute color="primary")
             v-btn(:href="item.link") {{ $t("more-info")}}

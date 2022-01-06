@@ -3,11 +3,11 @@
   span.anchor-tag(id="portfolio")
   v-container.main(fluid)
     div(ref="container" v-resize="() => {this.width = this.$refs.container.clientWidth}")
-      p.text-h3.f-title {{ $t('title') }}
+      p.f-title {{ $t('title') }}
       v-tabs(v-model="tabIndex" v-bind="vTabProps")
-        v-tabs-slider(color="accent lighten-3")
+        v-tabs-slider(color="lighten-3")
         template(v-for="(tab, index) in Object.keys(tabItems)" top)
-          v-tab(:key="tab") {{ $t(tab + ".name") }}
+          v-tab(:key="tab") {{ $t("portfolio.tabs." + tab) }}
       v-tabs-items(v-model="tabIndex")
         v-tab-item(v-for="tab in Object.keys(tabItems)" :key="tab")
           component(:is="tabItems[tab]" :items="portfolioData[tab]" :width="width")
@@ -28,7 +28,7 @@ let vTabProps = {
 let tabItems = {
   experiences: "Timeline",
   projects: "Timeline",
-  skills: "CardList",
+  technologies: "CardList",
   hobbies: "CardList",
   languages: "LanguageList"
 }
@@ -76,14 +76,9 @@ export default Vue.extend({
 <i18n>
 {
   "en": {
-    "title": "Portfolio",
-    "main": "Main",
-    "sub": "Par1 {0} Par2 {0} Par{0}",
-    "resume-file": "Resume.pdf",
-    "resume": "Resume"
+    "title": "Portfolio"
   },
   "es" : {
-    "resume-file": "Resume_es.pdf"
   }
 }
 </i18n>

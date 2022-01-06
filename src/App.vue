@@ -26,10 +26,70 @@ export default Vue.extend({
 
 .container.main {
   //alias for .py-16.px-10 and applies to all v-container.main
+  //used as a padding for main container
   padding-right: 40px !important;
   padding-left: 40px !important;
   padding-top: 64px !important;
   padding-bottom: 64px !important;
+}
+.f-title {
+  //.test-h3
+  font-size: 3rem !important;
+    font-weight: 400;
+    line-height: 3.125rem;
+    letter-spacing: normal !important;
+    font-family: "Roboto", sans-serif !important;
+        color: rgba(0, 0, 0, 0.87);
+}
 
+.f-title-small {
+  //.text-h6
+      font-size: 1.25rem !important;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: 0.0125em !important;
+    font-family: "Roboto", sans-serif !important;
+    color: rgba(0, 0, 0, 0.87);
+}
+  .f-sub {
+  //alias for .text-body-2
+  // used for all subtitles in cards 
+      font-size: 0.875rem !important;
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: 0.0178571429em !important;
+    font-family: "Roboto", sans-serif !important;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .f-sub-bold {
+  //alias for .text-body-2
+  // used for all subtitles in cards 
+      font-size: 0.875rem !important;
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: 0.0178571429em !important;
+    font-family: "Roboto", sans-serif !important;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  .f-main {
+    //alias for .text-h6
+        font-size: 1.25rem !important;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: 0.0125em !important;
+    font-family: "Roboto", sans-serif !important;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+.v-card.text-center .v-card__title {
+  //allows you to have v-card text center with v-card.text-center
+  //and the default
+  //v-card.text-left
+  justify-content: center;
+}
+.header header{
+  z-index: 100 !important;
 }
 </style>

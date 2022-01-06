@@ -1,7 +1,43 @@
 {
     "portfolio": {
+        "Red Canari": {
+            "role": "Software Developer & Hacker",
+            "description": "<ul><li>Developed <em>RegenX</em>, a web tool that generates customized reports based on report schemas, using <strong>React</strong>, <strong>Couch/PouchDB (NoSQL)</strong>, and <strong>Spring Reactive</strong></li><li>Assembled a proxy database for runtime datatype analysis and version controlling through hooks,which uncovered&nbsp;over <strong>40</strong>&nbsp;data integrity issues/bugs</li><li>Contributed to the open-source software Jinjava, a software that implements the templating engine Jinja in Java</li><li>Collaborated with the CEO and the marketing director to promote <em>RegenX</em> by providing technical support and use cases</li><li>Took the initiative to create onboarding resources and train new co-ops</li></ul>"
+        },
+        "Ericsson": {
+            "role": "Network Verification - Co-op Developer",
+            "description": "<ul><li>Developed a proxy server written in <strong>Angular</strong>, <strong>PostgresDB</strong>, and <strong>Spring Boot</strong>, which is for network data version control and data transformation</li><li>Facilitated network simulation by leading development of a service using <strong>Java</strong> to batch process and feed data to 5G network labs</li><li>Performed load tests that support up to <strong>50GB</strong> of data, aggregated results, and identified scaling bottlenecks</li><li>Auto-generated over <strong>30</strong> pages of Network Entities APIs by creating Excel sheets, graphs and Json Schemas from datasets</li><li>Created <strong>Python</strong> scripts to validate Json Schemas against network entities fetched from <strong>Kubernetes</strong>, which found over <strong>5000+</strong> instances of structural-inconsistences</li><li>Refactored and enhanced Nginx and <strong>Docker</strong> configuration files to enable remote deployment on Windows and Linux</li></ul>"
+        },
         "Kinaxis": {
-            "description": "<li>Led development of a website written in <strong>Vue</strong>, <strong>Express</strong>, and <strong>SQLite</strong> which fetches datasets, and creates graphs through the <strong>Elastic Stack</strong> endpoints and visualizes them on a dashboard</li>"
+            "role": "Software Developer Data Server",
+            "description": "<ul><li>Led development of a website written in <strong>Vue</strong>, <strong>Express</strong>, and <strong>SQLite</strong> which fetches datasets, and creates graphs through the <strong>Elastic Stack</strong> endpoints and visualizes them on a dashboard</li></ul>"
+        },
+        "Carleton University": {
+            "role": "Software Developer",
+            "description": "<ul><li>Implemented a program in Java that allows transferable datasets used for machine learning between <strong>DL4J</strong> and <strong>Keras</strong> frameworks</li><li>Redesigned <em>Java Learning by Observation Framework</em>, increasing speed, scalability, and extensibility</li></ul>"
+        },
+        "Chess Learning Program": {
+            "role": "Lead Developer",
+            "description": "My very first project designed to help people learn chess and chess openings. Coded in <strong>Java</strong> with a group of 2 people"
+        },
+        "This Website": {
+            "role": "Owner",
+            "description": "Coded in <strong>Vue</strong>, <strong>Typescript</strong> with End-To-End Testing"
+        },
+        "Piano": {
+            "title": "Piano",
+            "description": "Been playing for 10+ years"
+        },
+        "Volleyball": {
+            "title": "Volleyball",
+            "description": "Role: Spiker"
+        },
+        "tabs": {
+            "experiences": "Experiences",
+            "projects": "Projects",
+            "technologies": "Technologies",
+            "hobbies": "Hobbies",
+            "languages": "Languages"
         }
     }
 }

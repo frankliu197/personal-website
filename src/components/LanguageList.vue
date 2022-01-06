@@ -1,7 +1,7 @@
 <template lang="pug">
 .language-list
   template(v-for="item in items")
-    v-card.item-card(:key="item.title" rounded=0 v-bind="cardDimensions" @click="$root.$i18n.locale = item.code" :disabled="isLanguageSelected(item) || ! isSupported(item) ") 
+    v-card.text-center.item-card(:key="item.title" rounded=0 v-bind="cardDimensions" @click="$root.$i18n.locale = item.code" :disabled="isLanguageSelected(item) || ! isSupported(item) ") 
       v-card-title {{ $t(item.title + ".name" ) }}
       v-card-subtitle {{ $t(item.title + ".fluency")}}
       v-card-text.dark-text(v-if="isLanguageSelected(item)") {{ $t("currently-selected") }}   
@@ -63,9 +63,7 @@ export default Vue.extend({
   overflow: hidden;
 }
 
-.v-card__title {
-  display: inherit !important;
-}
+
 
 </style>
 

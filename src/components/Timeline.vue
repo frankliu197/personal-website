@@ -6,26 +6,26 @@
         template(v-slot:icon)
           v-avatar
             img(:src="require(`@/assets/portfolio/${item.title}.jpg`)")
-        v-card.elevation-2.pb-1
+        v-card.text-left.elevation-2.pb-1
           template(v-if="width > 680")
-            v-card-title.horizontal-aligner.pb-2
+            v-card-title.horizontal-aligner.mb-0
               span
-                span.text-h6.f-main  {{ item.title }}
+                span.f-main  {{ item.title }}
                 .x-spacer
-                span.text-body-2.f-sub.mb-1.subtitle {{ item.start }}
-                span.text-body-2.f-sub.mb-1.subtitle(v-if="item.end")  - {{ item.end }}
+                span.f-sub-bold.mb-1 {{ $t('portfolio.' + item.title + ".role" )}}
               v-spacer
               TimelineIcons(:item="item")
           template(v-else)
-            v-card-title.horizontal-aligner
-              span.text-h6.f-main  {{ item.title }}
+            v-card-title.horizontal-aligner.mb-0
+              span.f-main  {{ item.title }}
               v-spacer
               TimelineIcons(:item="item")
-            v-card-subtitle.pb-2
-              span.text-body-2.f-sub.mb-1.subtitle {{ item.start }}
-              span.text-body-2.f-sub.mb-1.subtitle(v-if="item.end")  - {{ item.end }}
-          v-card-text.pt-0
-            ul(v-html="$t('portfolio.' + item.title + '.description')")
+            v-card-title.mb-0(v-if="item.role" style="margin-top: -35px")
+              span.f-sub-bold {{ $t('portfolio.' + item.title + ".role" )}}
+          v-card-subtitle.pt-0.pb-2
+            span.f-sub {{ item.start }}
+            span.f-sub(v-if="item.end")  - {{ item.end }}
+          v-card-text.pt-0(v-html="$t('portfolio.' + item.title + '.description')")
 
 
             
@@ -59,12 +59,8 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.v-card {
-  text-align: left;
-}
-.subtitle {
-  color: rgba(0, 0, 0, 0.6);
-}
+
+
 </style>
 
 <i18n>

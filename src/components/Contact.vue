@@ -7,9 +7,7 @@
         v-btn.ma-2(icon @click="showSheet = false")
           v-icon(large) mdi-close
       .py-4.px-15(style="margin-top: -44px")
-        span.text-h6 I would be glad to hear from you!
-        br
-        span.text-h6 Contact me using the methods below:
+        span.f-title-small(v-html="$t('slot')")
         .horizontal-aligner.py-4(style="gap: 20px")
           v-tooltip(bottom v-for="(contact, index) in contactInfo" :key="index")
             template(v-slot:activator="{ on, attrs }")
@@ -44,3 +42,11 @@ export default Vue.extend({
 <style>
 
 </style>
+
+<i18n>
+{
+  "en": {
+    "slot": "I would be glad to hear from you! <br> Contact me using the methods below:"
+  }
+}
+</i18n>
