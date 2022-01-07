@@ -140,7 +140,7 @@ export default Vue.extend({
 .theme--dark {
   .carousel {
     .v-image__image {
-      filter: brightness(1);
+      filter: brightness(0.5);
     }
 
     

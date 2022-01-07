@@ -23,30 +23,41 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="scss" scoped>
-.background-image-styles {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(245, 246, 252, 0),
-      rgba(245, 246, 252, 0.7)
-    ),
-    url("../assets/images/about.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
+<style lang="scss">
+
 
 .about {
  .background {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(245, 246, 252, 0),
-        rgba(245, 246, 252, 0.7)
-      ),
-      url("../assets/images/about.jpg");
+    background-image: url("../assets/images/about.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+  }
+
+}
+
+
+.theme--dark {
+  .about {
+    .background {
+      background: linear-gradient(
+        to bottom,
+       rgba(0, 0, 0, 0.5),
+        rgba(0,0,0, 0.5)
+      ), url("../assets/images/about.jpg");;
+    }
+  }
+}
+
+.theme--light {
+  .about {
+   .background {
+      background: linear-gradient(
+        to bottom,
+       rgba(256, 256, 256, 0.3),
+       rgba(256, 256, 256, 0.3)
+      ), url("../assets/images/about.jpg");;
+    }
   }
 }
 </style>
