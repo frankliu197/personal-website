@@ -1,5 +1,5 @@
 <template lang="pug">
-v-checkbox.dark-theme-toggler(v-model='$vuetify.theme.dark' off-icon='mdi-theme-light-dark' on-icon='mdi-theme-light-dark')
+v-checkbox.dark-theme-toggler.f-btn-icon-bold(v-model='$vuetify.theme.dark' off-icon='mdi-theme-light-dark' on-icon='mdi-theme-light-dark')
 </template>
 
 <script lang="ts">

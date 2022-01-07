@@ -1,6 +1,7 @@
 <template lang="pug">
 .carousel 
   v-img.fullscreen(src="@/assets/images/carousel.jpg")
+    .menu-overlay
     .text-overlay
       div(style="height: 20vh")
       .inline-text
@@ -44,72 +45,121 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="scss" scoped>
-.text-overlay {
-  top: 25%;
-  height: 75%;
-  width: 100%;
-  position: absolute;
-  background: linear-gradient(
-    to bottom,
-    rgba(245, 246, 252, 0),
-    rgba(255, 144, 53, 0.8)
-  );
-}
-
-
-
-.inline-text {
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 6px;
-}
-
-.title-button {
-  height: 100px;
-  width: 100px;
-
-  .v-icon {
-    font-size: 100px;
+<style lang="scss">
+.carousel {
+  .text-overlay {
+    top: 25%;
+    height: 75%;
+    width: 100%;
+    position: absolute;
   }
-}
 
-.website-title {
-  font-weight: 450;
-  font-style: italic;
-  transform: translateX(100vw);
-  font-size: 13vh;
+  .menu-overlay {
+    top: 0%;
+    height: 25%;
+    width: 100%;
+    position: absolute;
+  }
 
-  @media only screen and (max-width: 900px) {
-    font-size: 3.75em;
+  .inline-text {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .title-button {
+    height: 100px;
+    width: 100px;
+
+    .v-icon {
+      font-size: 100px;
+    }
+  }
+
+  .website-subtitle {
+    font-size: 1.25rem !important;
+    font-weight: 500;
+    letter-spacing: 0.0125em !important;
+    //alias .text-h6
+  }
+
+  .f-spacer {
+    width: calc(2em - 12px);
+    display: inline-block;
+  }
+
+  .fade-in {
+    animation-delay: 3.5s;
+  }
+
+  .website-title {
+    font-weight: 450;
+    font-style: italic;
+    transform: translateX(100vw);
+    font-size: 13vh;
+
+    @media only screen and (max-width: 900px) {
+      font-size: 3.75em;
+    }
   }
 }
 
 .theme--light {
-    .website-title, .website-subtitle, .title-button .v-icon {
+  .carousel {
+    .website-title,
+    .website-subtitle,
+    .title-button .v-icon {
       color: #fffde7;
     }
 
+    .menu-overlay {
+      background: linear-gradient(
+        to bottom,
+        rgba(256, 256, 256, 0.6),
+        rgba(256, 256, 256, 0.1)
+      );
+    }
+
+    .text-overlay {
+      background: linear-gradient(
+        to bottom,
+        rgba(256, 256, 256, 0.1),
+        rgba(255, 144, 53, 0.8)
+      );
+    }
+
+    .v-image__image {
+      filter: brightness(0.5);
+    }
+  }
 }
-.website-subtitle {
-  font-size: 1.25rem !important;
-  font-weight: 500;
-  letter-spacing: 0.0125em !important;
-  //alias .text-h6
-}
 
-.f-spacer {
-  width: calc(2em - 12px);
-  display: inline-block;
-}
+.theme--dark {
+  .carousel {
+    .v-image__image {
+      filter: brightness(1);
+    }
 
+    
+    .menu-overlay {
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.6),
+        rgba(256, 256, 256, 0.1)
+      );
+    }
 
-
-.fade-in {
-  animation-delay: 3.5s;
+    .text-overlay {
+      background: linear-gradient(
+        to bottom,
+        rgba(256, 256, 256, 0.1),
+        rgba(255, 144, 53, 0.8)
+      );
+    }
+  }
 }
 </style>
 

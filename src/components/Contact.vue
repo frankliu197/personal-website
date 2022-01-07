@@ -13,7 +13,7 @@
             template(v-slot:activator="{ on, attrs }")
               a.vertical-aligner.f-sub-bold(v-on="on" v-bind="attrs" :href="contact.link" target="_blank")
                 span.pb-2 {{ contact.type.toUpperCase() }}
-                v-btn.background-white(icon)
+                v-btn.f-btn-icon-bold(icon)
                   v-icon(size="50px" ) {{ contact.icon }}
             span {{ contact.info }}
 </template>
@@ -41,9 +41,6 @@ export default Vue.extend({
 
 <style lang="scss">
 
-.theme--light.v-btn {
-    color: #191d20e8 !important;
-  }
 
 
 </style>

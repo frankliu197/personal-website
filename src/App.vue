@@ -97,6 +97,10 @@ export default Vue.extend({
   .website-subtitle {
     color: #fffde7;
   }
+  
+  .f-btn-icon-bold .v-icon {
+    color: #191d20e8 !important;
+  }
 }
 
 .v-card.text-center .v-card__title {

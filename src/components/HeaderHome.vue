@@ -129,6 +129,12 @@ export default Vue.extend({
     align-items: center;
   }
 }
+
+.theme--light {
+  .header-home {
+    
+  }    
+}
 </style>
 
 <i18n>
