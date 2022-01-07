@@ -167,6 +167,15 @@ export default Vue.extend({
 {
   "en": {
     "more": "More About Me Below"
+  },
+  "es": {
+    "more": "Mas Sobre Mi Abajo"
+  }, 
+  "ja": {
+    "more": "私について"
+  },
+  "zh": {
+    "more": "更多关于我"
   }
 }
 </i18n>

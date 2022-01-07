@@ -1,30 +1,34 @@
 <template lang="pug">
 .portfolio
-  span.anchor-tag(id="portfolio")
+  span#portfolio.anchor-tag
   v-container.main(fluid)
     div(ref="container" v-resize="() => {this.width = this.$refs.container.clientWidth - 8}")
       p.f-title {{ $t('title') }}
-      v-tabs(v-model="tabIndex" v-bind="vTabProps")
+      v-tabs(v-model="tabIndex", v-bind="vTabProps")
         v-tabs-slider
-        template(v-for="(tab, index) in Object.keys(tabItems)" top)
-          v-tab(:key="tab") {{ $t("portfolio.tabs." + tab) }}
+        template(v-for="(tab, index) in Object.keys(tabItems)", top)
+          v-tab(:key="tab") {{ $t('tabs.' + tab) }}
       v-tabs-items(v-model="tabIndex")
-        v-tab-item(v-for="tab in Object.keys(tabItems)" :key="tab")
-          component.pa-1(:is="tabItems[tab]" :items="portfolioData[tab]" :width="width")
+        v-tab-item(v-for="tab in Object.keys(tabItems)", :key="tab")
+          component.pa-1(
+            :is="tabItems[tab]",
+            :items="portfolioData[tab]",
+            :width="width"
+          )
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue from "vue";
 import Timeline from "@/components/Timeline.vue";
 import CardList from "@/components/CardList.vue";
 import LanguageList from "@/components/LanguageList.vue";
-import CardListBasic from "@/components/CardListBasic.vue"
+import CardListBasic from "@/components/CardListBasic.vue";
 let vTabProps = {
   "fixed-tabs": true,
   "next-icon": "mdi-arrow-right-bold-box-outline",
   "prev-icon": "mdi-arrow-left-bold-box-outline",
-  "show-arrows": true
-}
+  "show-arrows": true,
+};
 
 let tabItems = {
   experiences: "Timeline",
@@ -33,33 +37,31 @@ let tabItems = {
   awards: "CardListBasic",
   hobbies: "CardList",
   languages: "LanguageList",
-}
+};
 
-import portfolioData from "@/assets/json/Portfolio.json"
+import portfolioData from "@/assets/json/Portfolio.json";
 export default Vue.extend({
-  name: 'Portfolio',
+  name: "Portfolio",
   components: {
     Timeline,
     CardList,
     LanguageList,
-    CardListBasic
+    CardListBasic,
   },
   data: () => ({
     tabIndex: 0,
     vTabProps,
     tabItems,
     portfolioData,
-    width: 0
+    width: 0,
   }),
-  methods: {
-  },
+  methods: {},
   watch: {
-    tabIndex: function() {
-      this.$emit('onTabChange', {tabIndex: this.tabIndex})
-    }
-  }
+    tabIndex: function () {
+      this.$emit("onTabChange", { tabIndex: this.tabIndex });
+    },
+  },
 });
-
 </script>
 
 <style lang="scss" scoped>
@@ -79,9 +81,48 @@ export default Vue.extend({
 <i18n>
 {
   "en": {
-    "title": "Portfolio"
+    "title": "Portfolio",
+    "tabs": {
+      "experiences": "Experiences",
+      "projects": "Projects",
+      "technologies": "Technologies",
+      "awards": "Awards",
+      "hobbies": "Hobbies",
+      "languages": "Languages"
+    }
   },
   "es" : {
+    "title": "Portafolio",
+    "tabs": {
+      "experiences": "Experiencia",
+      "projects": "Proyectos",
+      "technologies": "Technologia",
+      "awards": "Premios",
+      "hobbies": "Aficiones",
+      "languages": "Idiomas"
+    }
+  },
+  "zh": {
+    "title": "作品集",
+    "tabs": {
+        "experiences": "经验",
+        "projects": "项目",
+        "technologies": "技術",
+        "awards": "将",
+        "hobbies": "乐趣",
+        "languages": "语言"
+    }
+  },
+  "ja": {
+    "title": "ポートフォリオ",
+    "tabs": {
+        "experiences": "经验",
+        "projects": "プロジェクト",
+        "technologies": "技術",
+        "awards": "表彰",
+        "hobbies": "趣味",
+        "languages": "言語"
+    }
   }
 }
 </i18n>

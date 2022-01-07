@@ -31,15 +31,6 @@
         "Volleyball": {
             "title": "Volleyball",
             "description": "Role: Spiker"
-        },
-        "tabs": {
-            "experiences": "Experiences",
-            "projects": "Projects",
-            "technologies": "Technologies",
-            "awards": "Awards",
-            "hobbies": "Hobbies",
-            "languages": "Languages"
         }
-
     }
 }

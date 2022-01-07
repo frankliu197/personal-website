@@ -56,12 +56,19 @@ export default Vue.extend({
   "en": {
     "title": "About Me",
     "description-main": "My name is Frank Liu and I am a fifth year student at Carleton University.",
-    "description": "To learn more, download my resume, or browse my portfolio! <br><br> This webpage is under construction. Date started: Jan 2, 2022.",
+    "description": "I am a one of those computer science enthusiasts who codes both as a hobby and as a career. In my own time, I typically enjoy learning programming technologies and re-coding various programs to make them run faster. After all, one of my dreams is to build a supercomputer! <br><br> Unlike most programmers, I am a very social person. I enjoy working in a group environment and sharing my knowledge. This is one of the main reasons I have started a Linux Tutorial blog.<br><br>To learn more, download my resume, or browse my portfolio!",
     "resume-file": "Resume.pdf",
     "resume": "Resume"
   },
   "es" : {
+    "title": "Sobre mi",
     "resume-file": "Resume_es.pdf"
+  },
+  "zh" :{
+    "title": "关于我" 
+  },
+  "ja": {
+    "title": "自己紹介"
   }
 }
 </i18n>

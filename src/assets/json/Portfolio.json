@@ -38,18 +38,23 @@
         }
     ],
     "technologies": [{
-        "title": "Programming Languages",
-        "description": "JavaScript/TypeScript, Python, Java, Bash, C/C++, Ruby"
-    }, {
-        "title": "Web Development",
-        "description": "React/Vue/Angular, JavaScript/Typescript, Express.js, Spring, Node.js, HTML/CSS, REST Test"
-    }, {
-        "title": "Databases",
-        "description": "SQL, NoSQL, SQLite, MongoDB, PostgresSQL, CouchDB"
-    }, {
-        "title": "Tools",
-        "description": "Git, SQL/NoSQL, Visual Studio, Docker, Kubernetes, Elastic Stack"
-    }],
+            "title": "Programming Languages",
+            "description": "JavaScript/TypeScript, Python, Java, Bash, C/C++, Ruby"
+        }, {
+            "title": "Web Development",
+            "description": "React/Vue/Angular, JavaScript/Typescript, Express.js, Spring, Node.js, HTML/CSS, REST Test"
+        }, {
+            "title": "Databases",
+            "description": "SQL, NoSQL, SQLite, MongoDB, PostgresSQL, CouchDB"
+        }, {
+            "title": "Tools",
+            "description": "Git, SQL/NoSQL, Visual Studio, Docker, Kubernetes, Elastic Stack"
+        },
+        {
+            "title": "Operating Systems",
+            "description": "Linux, Windows"
+        }
+    ],
     "awards": [{
             "title": "Nominated for Co-op Student of the Year",
             "start": "2020",

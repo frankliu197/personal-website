@@ -1,7 +1,7 @@
 <template lang="pug">
 .contact
   v-bottom-sheet(v-model="showSheet" width="auto")
-    v-sheet.text-center(height="225px")
+    v-sheet.text-center
       .horizontal-aligner
         v-spacer  
         v-btn.ma-2(icon @click="showSheet = false")
@@ -14,7 +14,7 @@
               a.vertical-aligner.f-sub-bold(v-on="on" v-bind="attrs" :href="contact.link" target="_blank")
                 span.pb-2 {{ contact.type.toUpperCase() }}
                 v-btn.f-btn-icon-bold(icon)
-                  v-icon(size="50px" ) {{ contact.icon }}
+                  v-icon(size="50px") {{ contact.icon }}
             span {{ contact.info }}
 </template>
 
@@ -40,8 +40,6 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-
-
 
 </style>
 
