@@ -40,6 +40,7 @@ export default Vue.extend({
   },
   computed: {
     cardWidth() : any {
+      //due to padding need to -10
       let width = (this.width - 1) / floor(this.width / CARD_WIDTH)
       return {
         width

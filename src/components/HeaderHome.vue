@@ -10,12 +10,12 @@
         v-btn(text='text' @click="emitter.emit('toggleContact')") {{ $t('contact') }}
     v-spacer
     v-toolbar-items
-      darkthemetoggler
-      localeselector
-      template(v-if='collapseNavBar')
+      DarkThemeToggler
+      LocaleSelector
+      //template(v-if='collapseNavBar')
         v-divider(vertical='vertical')
         v-app-bar-nav-icon(@click='showNavDrawer = true')
-  v-navigation-drawer(app='app' temporary='temporary' right='right' v-model='showNavDrawer' v-bind='navDrawDimensions' v-resize='() => {showNavDrawer = collapseNavBar && showNavDrawer}')
+  //for laterv-navigation-drawer(app='app' temporary='temporary' right='right' v-model='showNavDrawer' v-bind='navDrawDimensions' v-resize='() => {showNavDrawer = collapseNavBar && showNavDrawer}')
     v-list
       v-list-item
         v-list-item-title.text-h6 {{ $t('Menu') }}

@@ -2,7 +2,7 @@
 .portfolio
   span.anchor-tag(id="portfolio")
   v-container.main(fluid)
-    div(ref="container" v-resize="() => {this.width = this.$refs.container.clientWidth}")
+    div(ref="container" v-resize="() => {this.width = this.$refs.container.clientWidth - 8}")
       p.f-title {{ $t('title') }}
       v-tabs(v-model="tabIndex" v-bind="vTabProps")
         v-tabs-slider(color="lighten-3")
