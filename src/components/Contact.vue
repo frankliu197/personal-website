@@ -11,10 +11,10 @@
         .horizontal-aligner.py-4(style="gap: 20px")
           v-tooltip(bottom v-for="(contact, index) in contactInfo" :key="index")
             template(v-slot:activator="{ on, attrs }")
-              a.vertical-aligner.black--text(v-on="on" v-bind="attrs" :href="contact.link" target="_blank")
+              a.vertical-aligner.f-sub-bold(v-on="on" v-bind="attrs" :href="contact.link" target="_blank")
                 span.pb-2 {{ contact.type.toUpperCase() }}
                 v-btn.background-white(icon)
-                  v-icon(size="50px" color="#191d20e8") {{ contact.icon }}
+                  v-icon(size="50px" ) {{ contact.icon }}
             span {{ contact.info }}
 </template>
 
@@ -39,7 +39,12 @@ export default Vue.extend({
 
 </script>
 
-<style>
+<style lang="scss">
+
+.theme--light.v-btn {
+    color: #191d20e8 !important;
+  }
+
 
 </style>
 

@@ -1,7 +1,7 @@
 <template lang="pug">
 .header-home.header(ref='container' v-resize='onResize')
   v-app-bar(:height='HEADER_HEIGHT' fixed='fixed' v-scroll='onScroll' :class='navBarClass()' :elevation='scrollTop == 0 ? 0 : 12')
-    v-btn.secondary--text(text='text' @click='scrollToTop')
+    v-btn(text='text' @click='scrollToTop')
       v-app-bar-title Frank Liu
     v-toolbar-items
       template(v-if='!collapseNavBar')

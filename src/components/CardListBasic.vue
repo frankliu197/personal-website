@@ -40,7 +40,6 @@ export default Vue.extend({
   },
   computed: {
     cardWidth() : any {
-      //due to padding need to -10
       let width = (this.width - 1) / floor(this.width / CARD_WIDTH)
       return {
         width
@@ -64,9 +63,14 @@ export default Vue.extend({
 .item-card {
   padding: 3px 3px 10px 3px;
   text-align: left;
-  background-color: #fffbc5 !important;
   text-align: left;
   overflow: hidden;
+}
+
+.theme--light {
+  .item-card {
+    background-color: #fffbc5 !important;
+  }
 }
 
 </style>

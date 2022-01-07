@@ -59,10 +59,15 @@ export default Vue.extend({
 
 .item-card {
   padding: 3px 3px 10px 3px;
-  background-color: #fffbc5 !important;
   overflow: hidden;
 }
 
+.theme--light {
+  .item-card {
+    
+    background-color: #fffbc5 !important;
+  }
+}
 
 
 </style>

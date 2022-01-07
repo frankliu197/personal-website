@@ -73,13 +73,11 @@ export default Vue.extend({
   width: 100px;
 
   .v-icon {
-    color: var(--v-secondary-base);
     font-size: 100px;
   }
 }
 
 .website-title {
-  color: var(--v-secondary-base);
   font-weight: 450;
   font-style: italic;
   transform: translateX(100vw);
@@ -90,18 +88,25 @@ export default Vue.extend({
   }
 }
 
-.f-spacer {
-  width: calc(2em - 12px);
-  display: inline-block;
-}
+.theme--light {
+    .website-title, .website-subtitle, .title-button .v-icon {
+      color: #fffde7;
+    }
 
+}
 .website-subtitle {
-  color: var(--v-secondary-base);
   font-size: 1.25rem !important;
   font-weight: 500;
   letter-spacing: 0.0125em !important;
   //alias .text-h6
 }
+
+.f-spacer {
+  width: calc(2em - 12px);
+  display: inline-block;
+}
+
+
 
 .fade-in {
   animation-delay: 3.5s;

@@ -5,7 +5,7 @@
     div(ref="container" v-resize="() => {this.width = this.$refs.container.clientWidth - 8}")
       p.f-title {{ $t('title') }}
       v-tabs(v-model="tabIndex" v-bind="vTabProps")
-        v-tabs-slider(color="lighten-3")
+        v-tabs-slider
         template(v-for="(tab, index) in Object.keys(tabItems)" top)
           v-tab(:key="tab") {{ $t("portfolio.tabs." + tab) }}
       v-tabs-items(v-model="tabIndex")
