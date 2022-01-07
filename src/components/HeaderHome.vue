@@ -1,59 +1,39 @@
 <template lang="pug">
-.header-home.header(ref="container", v-resize="onResize")
-  v-app-bar(
-    :height="HEADER_HEIGHT",
-    fixed,
-    v-scroll="onScroll",
-    :class="navBarClass()",
-    :elevation="scrollTop == 0 ? 0 : 12"
-  )
-    v-btn.secondary--text(text, @click="scrollToTop")
+.header-home.header(ref='container' v-resize='onResize')
+  v-app-bar(:height='HEADER_HEIGHT' fixed='fixed' v-scroll='onScroll' :class='navBarClass()' :elevation='scrollTop == 0 ? 0 : 12')
+    v-btn.secondary--text(text='text' @click='scrollToTop')
       v-app-bar-title Frank Liu
     v-toolbar-items
-      template(v-if="!collapseNavBar")
-        template(v-for="item of menuItems")
-          v-btn(
-            text,
-            :href="'#' + item.title.toLowerCase()",
-            :class="navBtnClass(item)"
-          ) {{ $t(item.title) }}
-        v-btn(text, @click="emitter.emit('toggleContact')") {{ $t('contact') }}
+      template(v-if='!collapseNavBar')
+        template(v-for='item of menuItems')
+          v-btn(text='text' :href="'#' + item.title.toLowerCase()" :class='navBtnClass(item)') {{ $t(item.title) }}
+        v-btn(text='text' @click="emitter.emit('toggleContact')") {{ $t('contact') }}
     v-spacer
     v-toolbar-items
-      DarkThemeToggler
-      LocaleSelector
-      template(v-if="collapseNavBar")
-        v-divider(vertical)
-        v-app-bar-nav-icon(@click="showNavDrawer = true")
-  v-navigation-drawer(
-    app,
-    temporary,
-    right,
-    v-model="showNavDrawer",
-    v-bind="navDrawDimensions",
-    v-resize="() => {showNavDrawer = collapseNavBar && showNavDrawer}"
-  )
+      darkthemetoggler
+      localeselector
+      template(v-if='collapseNavBar')
+        v-divider(vertical='vertical')
+        v-app-bar-nav-icon(@click='showNavDrawer = true')
+  v-navigation-drawer(app='app' temporary='temporary' right='right' v-model='showNavDrawer' v-bind='navDrawDimensions' v-resize='() => {showNavDrawer = collapseNavBar && showNavDrawer}')
     v-list
       v-list-item
         v-list-item-title.text-h6 {{ $t('Menu') }}
     v-divider
     v-list
-      template(v-for="item of menuItems")
+      template(v-for='item of menuItems')
         v-list-item
-          v-btn(
-            text,
-            :href="'#' + item.title.toLowerCase()",
-            :class="navBtnClass(item)"
-          ) {{ $t(item.title) }}
+          v-btn(text='text' :href="'#' + item.title.toLowerCase()" :class='navBtnClass(item)') {{ $t(item.title) }}
       v-list-item
-        v-btn(text, @click="emitter.emit('toggleContact')") {{ $t('Contact') }}
+        v-btn(text='text' @click="emitter.emit('toggleContact')") {{ $t('Contact') }}
+
 </template>
 
 
 <script lang="ts">
 import Vue from "vue";
 const MIN_NAVDRAW_WIDTH = 300;
-const COLLAPSE_NAV_BAR_WIDTH = 600;
+const COLLAPSE_NAV_BAR_WIDTH = 800;
 const HEADER_HEIGHT = 56;
 import DarkThemeToggler from "@/components/DarkThemeToggler.vue";
 import LocaleSelector from "@/components/LocaleSelector.vue";
@@ -148,7 +128,6 @@ export default Vue.extend({
   .v-toolbar__items {
     align-items: center;
   }
-
 }
 </style>
 
