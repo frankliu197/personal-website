@@ -2,10 +2,10 @@
 .language-list
   template(v-for="item in items")
     v-card.text-center.item-card(:key="item.title" rounded=0 v-bind="cardDimensions" @click="$root.$i18n.locale = item.code" :disabled="isLanguageSelected(item) || ! isSupported(item) ") 
-      v-card-title {{ $t(item.title + ".name" ) }}
-      v-card-subtitle {{ $t(item.title + ".fluency")}}
+      v-card-title {{ $t(item.title  ) }}
+      v-card-subtitle {{ $t(item.fluency )}}
       v-card-text.dark-text(v-if="isLanguageSelected(item)") {{ $t("currently-selected") }}   
-      v-card-text.dark-text(v-else-if="isSupported(item)") {{ $t("change-language", {"lang": item.title}) }}   
+      v-card-text.dark-text(v-else-if="isSupported(item)") {{ $t("change-language", {"lang": $t(item.title)}) }}   
       v-card-text.dark-text(v-else) 
 </template>
 
@@ -70,29 +70,56 @@ export default Vue.extend({
 <i18n>
 {
   "en": {
+    "Core": "Core",
+    "Professional": "Professional",
+    "Fluent": "Fluent",
+    "Native": "Native",
     "change-language": "Change language to {lang}",
-    "English": {
-      "name": "English",
-      "fluency": "Native"
-    },
-    "Spanish": {
-      "name": "Spanish",
-      "fluency": "Professional"
-    },
-    "French": {
-      "name": "French",
-      "fluency": "Core"
-    },
-    "Chinese": {
-      "name": "Chinese",
-      "fluency": "Professional"
-    }
+    "currently-selected": "Currently Selected",
+    "English": "English",
+    "Spanish": "Spanish",
+    "Japanese": "Japanese",
+    "French":  "French",
+    "Chinese": "Chinese"
   },
   "es": {
+    "Core": "Intermedio",
+    "Professional": "Competencia Profesional",
+    "Fluent": "Fluido",
+    "Native": "Nativo",
     "change-language": "Cambiar el idioma a {lang}",
-    "English": {
-      "name": "Inglés"
-    }
+    "currently-selected": "Actualmente Seleccionado",
+    "English": "Inglés",
+    "Spanish": "Español",
+    "French": "Francés",
+    "Chinese": "Chino",
+    "Japanese": "Japonés"
+  },
+  "zh": {
+    "Core": "中级",
+    "Professional": "高级 (无障碍商务沟通)",
+    "Fluent": "流利",
+    "Native": "母语",
+    "change-language": "改变语言为{lang}",
+    "currently-selected": "目前所选",
+    "English": "英文",
+    "Spanish": "西班牙语",
+    "French": "法语",
+    "Chinese": "中文",
+    "Japanese": "日文"
+  },
+  "ja": {
+    "Core": "中級",
+    "Professional": "ビジネス上級",
+    "Fluent": "流暢",
+    "Native": "母語",
+    "change-language": "言語を{lang}に変更",
+    "currently-selected": "現在の選択",
+    "English": "英語",
+    "Spanish": "スパイン語",
+    "French": "フランス語",
+    "Chinese": "中国語",
+    "Japanese": "日本語"
   }
 }
 </i18n>

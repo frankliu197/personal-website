@@ -20,6 +20,7 @@ export default new Vuetify({
         },
         themes: {
             light: {
+                testdf: "#101012", //make your own variable access using --v-testdb-base or -lighten1-5/darken1-5
                 primary: colors.blue.darken1,
                 secondary: colors.yellow.lighten5,
                 accent: colors.deepOrange.base

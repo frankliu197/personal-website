@@ -73,22 +73,27 @@
     ],
     "languages": [{
             "title": "English",
+            "fluency": "Native",
             "code": "en"
         },
         {
             "title": "Spanish",
+            "fluency": "Fluent",
             "code": "es"
         },
         {
             "title": "Chinese",
+            "fluency": "Professional",
             "code": "zh"
         },
         {
             "title": "Japanese",
+            "fluency": "Professional",
             "code": "ja"
         },
         {
-            "title": "French"
+            "title": "French",
+            "fluency": "Core"
         }
     ]
 }

@@ -10,7 +10,7 @@
           v-tab(:key="tab") {{ $t("portfolio.tabs." + tab) }}
       v-tabs-items(v-model="tabIndex")
         v-tab-item(v-for="tab in Object.keys(tabItems)" :key="tab")
-          component(:is="tabItems[tab]" :items="portfolioData[tab]" :width="width")
+          component.pa-1(:is="tabItems[tab]" :items="portfolioData[tab]" :width="width")
 </template>
 
 <script lang="ts">

@@ -104,7 +104,7 @@ export default Vue.extend({
 }
 
 .fade-in {
-  animation-delay: 3s;
+  animation-delay: 3.5s;
 }
 </style>
 

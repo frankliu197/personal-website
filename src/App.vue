@@ -1,5 +1,6 @@
 <template lang="pug">
 v-app
+  //<v-theme-provider root> possible required
   Header(v-if="$route.meta.defaultHeader")
   v-main
     router-view
@@ -88,6 +89,10 @@ export default Vue.extend({
   //and the default
   //v-card.text-left
   justify-content: center;
+}
+
+.v-card__title {
+      word-break: normal !important;
 }
 .header header{
   z-index: 100 !important;

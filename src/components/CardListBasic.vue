@@ -14,8 +14,7 @@
 import {  floor } from "lodash";
 import Vue from 'vue';
 
-const CARD_WIDTH = 300
-const CARD_MIN_WIDTH = 200
+const CARD_WIDTH = 500
 export default Vue.extend({
   name: 'CardListBasic',
   props: {
@@ -43,8 +42,7 @@ export default Vue.extend({
     cardWidth() : any {
       let width = (this.width - 1) / floor(this.width / CARD_WIDTH)
       return {
-        width,
-        "min-width": CARD_MIN_WIDTH
+        width
       }
     }
   }
