@@ -4,9 +4,9 @@
   v-container.main.background(fluid)
     p.f-title.text-center {{ $t('title') }}
     v-row.mt-4
-      v-col(sm=5, offset-sm=0, offset=2, cols=8)
+      v-col(md=5, offset-md=0, offset=2, cols=8)
         v-img.default(src="@/assets/images/Frank.jpg")
-      v-col(offset-sm=1, sm=6, offset=0, cols=12)
+      v-col(offset-md=1, md=6, offset=0, cols=12)
         span.f-main {{ $t('description-main') }}
         .y-spacer
         .y-spacer
@@ -66,8 +66,8 @@ export default Vue.extend({
 {
   "en": {
     "title": "About Me",
-    "description-main": "My name is Frank Liu and I am a fifth year student at Carleton University.",
-    "description": "I am a one of those computer science enthusiasts who codes both as a hobby and as a career. In my own time, I typically enjoy learning programming technologies and re-coding various programs to make them run faster. After all, one of my dreams is to build a supercomputer! <br><br> Unlike most programmers, I am a very social person. I enjoy working in a group environment and sharing my knowledge. This is one of the main reasons I have started a Linux Tutorial blog.<br><br>To learn more, download my resume, or browse my portfolio!",
+    "description-main": "My name is Frank Liu and I will be graduating Carleton University at April.",
+    "description": "I am a one of those computer science enthusiasts who codes both as a hobby and as a career. I am fascinated with software algorithms and architecture/design patterns. This includes technologies such as Machine Learning, Operating Systems Design (especially Linux), Container Management and Web Frameworks.<br><br>When I am not programming, you can usually find me exercising, hanging out with other people or playing the piano. I love meeting new people so feel free to contact me and say hello!",
     "resume-file": "Resume.pdf",
     "resume": "Resume"
   },

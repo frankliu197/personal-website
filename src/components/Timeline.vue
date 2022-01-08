@@ -1,12 +1,12 @@
 <template lang="pug">
 .timeline.pt-3
-    v-timeline(v-if="width > 550" dense)
+    v-timeline(v-if="width > 750" dense)
       v-timeline-item(v-for="item in items", :key="item.title", large)
         template(v-slot:icon)
           v-avatar
             img(:src="require(`@/assets/portfolio/${item.title}.jpg`)")
         v-card.text-left.elevation-2.pb-1
-          template(v-if="width > 680")
+          template(v-if="width > 850")
             v-card-title.horizontal-aligner.mb-0
               span
                 span.f-main {{ item.title }}

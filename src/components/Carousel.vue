@@ -172,7 +172,7 @@ export default Vue.extend({
     "more": "Mas Sobre Mi Abajo"
   }, 
   "ja": {
-    "more": "私について"
+    "more": "私のついて"
   },
   "zh": {
     "more": "更多关于我"

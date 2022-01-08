@@ -25,12 +25,21 @@ export default Vue.extend({
 
 <style lang='scss'>
 .container.main {
+
+
   //alias for .py-16.px-10 and applies to all v-container.main
   //used as a padding for main container
   padding-right: 40px !important;
   padding-left: 40px !important;
   padding-top: 64px !important;
   padding-bottom: 64px !important;
+}
+
+.container.main.slim {
+  @media only screen and (max-width: 650px) {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+  }
 }
 .f-title {
   //.test-h3
