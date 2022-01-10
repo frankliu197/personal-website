@@ -42,7 +42,7 @@
             "description": "JavaScript/TypeScript, Python, Java, Bash, C/C++, Ruby"
         }, {
             "title": "Web Development",
-            "description": "React/Vue/Angular, JavaScript/Typescript, Express.js, Spring, Node.js, HTML/CSS, REST Test"
+            "description": "React/Vue/Angular, JavaScript/Typescript, Express.js, Flask, Spring, Node.js, HTML/CSS, REST Test"
         }, {
             "title": "Databases",
             "description": "SQL, NoSQL, SQLite, MongoDB, PostgresSQL, CouchDB"
