@@ -16,6 +16,10 @@
             "role": "Software Developer",
             "description": "<ul><li>Implemented a program in Java that allows transferable datasets used for machine learning between <strong>DL4J</strong> and <strong>Keras</strong> frameworks</li><li>Redesigned <em>Java Learning by Observation Framework</em>, increasing speed, scalability, and extensibility</li></ul>"
         },
+        "Linux Tutorials": {
+            "role": "Owner",
+            "description": "Wrote Linux tutorials as a goal to teach the general public about Linux, and also to improve my technical writing skills"
+        },
         "Chess Learning Program": {
             "role": "Lead Developer",
             "description": "My very first project designed to help people learn chess and chess openings. Coded in <strong>Java</strong> with a group of 2 people"
