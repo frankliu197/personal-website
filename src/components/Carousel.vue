@@ -1,20 +1,20 @@
 <template lang="pug">
 .carousel 
   v-img.fullscreen(src="@/assets/images/carousel.jpg")
-    .menu-overlay
-    .text-overlay
-      div(style="height: 20vh")
+    .menu-overlay(style="height: 25vh")
+    .text-overlay(style="height: 75vh")
+      div.title-padding
       .inline-text
         template(v-for="(letter, index) in FIRST_NAME")
           span.website-title.slide-in-from-left(:style="firstName(index)") {{ letter }}
         .f-spacer
         template(v-for="(letter, index) in LAST_NAME")
           span.website-title.slide-in-from-left(:style="firstName(index)") {{ letter }}
-      div(style="height: 5vh")
+      div.subtitle-padding
       .inline-text
         span.website-subtitle.fade-in {{ $t('more') }}
       div(style="height: 2vh")
-      .inline-text
+      .inline-text(style="height: 10vh")
         v-btn.fade-in.title-button(icon, rounded, href="#about")
           v-icon mdi-arrow-down
 </template>
@@ -49,14 +49,17 @@ export default Vue.extend({
 .carousel {
   .text-overlay {
     top: 25%;
-    height: 75%;
     width: 100%;
     position: absolute;
   }
 
+  
+  .title-padding {
+    height: 20vh;
+  }
+
   .menu-overlay {
     top: 0%;
-    height: 25%;
     width: 100%;
     position: absolute;
   }
@@ -71,19 +74,23 @@ export default Vue.extend({
   }
 
   .title-button {
-    height: 100px;
-    width: 100px;
+    height: 15vh;
+    width: 15vh;
 
     .v-icon {
-      font-size: 100px;
+      font-size: 15vh;
     }
   }
 
+  .subtitle-padding {
+    height: 5vh;
+  }
+  
   .website-subtitle {
-    font-size: 1.25rem !important;
+    font-size: 4vh;
     font-weight: 500;
     letter-spacing: 0.0125em !important;
-    //alias .text-h6
+    text-align: center;
   }
 
   .f-spacer {
@@ -100,12 +107,83 @@ export default Vue.extend({
     font-style: italic;
     transform: translateX(100vw);
     font-size: 13vh;
+  }
 
-    @media only screen and (max-width: 900px) {
-      font-size: 3.75em;
+
+  
+  @media screen and (max-height: 400px) {
+    .website-subtitle {
+      font-size: 1rem;
+    }
+
+    .website-title {      
+      font-size: 2.75rem;
+    }
+
+    .title-button {
+      height: 50px;
+      width: 50px;
+
+      .v-icon {
+        font-size: 50px;
+      }
+    }
+
+    
+    .subtitle-padding {
+      height: 0vh;
+    }
+  }
+
+  @media screen and (max-height: 300px) { 
+    .title-padding {
+      height: 8vh !important;
+    }
+  }
+
+  
+  @media screen and (min-height: 300px) and (max-height: 400px) { 
+    .title-padding {
+      height: 15vh !important;
+    }
+  }
+
+  @media screen and (max-width: 400px) and (min-height: 400px) {
+    .website-title {      
+      font-size: 3.25em;
+    }
+
+    .website-subtitle {
+      font-size: 1rem !important;
+    }
+
+    .title-padding {
+      height: 30vh;
+    }
+
+    .title-button {
+      height: 50px;
+      width: 50px;
+
+      .v-icon {
+        font-size: 50px;
+      }
+    }
+  }
+
+  @media screen and  (max-width: 400px) and (min-height: 550px) { 
+    .title-padding {
+      height: 30vh !important;
+    }
+  }
+
+  @media screen and  (max-width: 400px) and (max-height: 550px) and (min-height: 400px) { 
+    .title-padding {
+      height: 15vh !important;
     }
   }
 }
+
 
 .theme--light {
   .carousel {
