@@ -148,7 +148,7 @@ export default Vue.extend({
     }
   }
 
-  @media screen and (max-width: 400px) and (min-height: 400px) {
+  @media screen and (max-width: 600px) and (min-height: 400px) {
     .website-title {      
       font-size: 3.25em;
     }
@@ -171,13 +171,13 @@ export default Vue.extend({
     }
   }
 
-  @media screen and  (max-width: 400px) and (min-height: 550px) { 
+  @media screen and  (max-width: 600px) and (min-height: 550px) { 
     .title-padding {
       height: 30vh !important;
     }
   }
 
-  @media screen and  (max-width: 400px) and (max-height: 550px) and (min-height: 400px) { 
+  @media screen and  (max-width: 600px) and (max-height: 550px) and (min-height: 400px) { 
     .title-padding {
       height: 15vh !important;
     }
