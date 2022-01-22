@@ -3,29 +3,46 @@
             "title": "Red Canari",
             "start": "May 2021",
             "end": "September 2021",
-            "link": "https://www.redcanari.com"
+            "link": "https://www.redcanari.com",
+            "role": "Software Developer & Hacker"
+        },
+        {
+            "title": "Ericsson",
+            "start": "Jan 2021",
+            "end": "April 2021",
+            "link": "https://www.ericsson.com/",
+            "role": "Python Developer"
         },
         {
             "title": "Ericsson",
             "start": "May 2020",
-            "end": "Aug 2021",
-            "link": "https://www.ericsson.com/"
+            "end": "December 2020",
+            "link": "https://www.ericsson.com/",
+            "role": "Full Stack Developer"
         },
         {
             "title": "Kinaxis",
             "start": "May 2019",
             "end": "Aug 2019",
-            "link": "https://www.kinaxis.com"
+            "link": "https://www.kinaxis.com",
+            "role": "Software Developer Data Server"
         },
         {
             "title": "Carleton University",
             "start": "May 2018",
             "end": "Aug 2018",
-            "link": "https://carleton.ca"
+            "link": "https://carleton.ca",
+            "role": "Software Developer"
         }
 
     ],
     "projects": [{
+            "title": "Carleton Code Gym",
+            "start": "January 2020",
+            "end": "Present",
+            "role": "Club Director"
+        },
+        {
             "title": "This Website",
             "start": "January 2022",
             "github": "https://github.com/frankliu197/personal-website"
@@ -39,6 +56,7 @@
             "title": "Chess Learning Program",
             "start": "September 2016",
             "end": "June 2017",
+            "role": "Lead Developer",
             "github": "https://github.com/frankliu197/Chess-Learning-Program"
         }
     ],
