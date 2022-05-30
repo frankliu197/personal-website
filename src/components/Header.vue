@@ -42,6 +42,12 @@ export default Vue.extend({
 .v-list-item .v-list-item__title {
   text-align: center;
 }
+.title-button {
+  background-color:rgba(89, 165, 218);
+}
+.inline-text{
+  font-size: 15px;
+}
 
 
 </style>

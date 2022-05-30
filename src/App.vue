@@ -100,6 +100,7 @@ export default Vue.extend({
 
   .f-sub {
     color: rgba(0, 0, 0, 0.6) !important;
+    padding-bottom: 50px;
   }
 
   .website-title,
@@ -117,12 +118,15 @@ export default Vue.extend({
   //and the default
   //v-card.text-left
   justify-content: center;
+  padding-bottom: 50px;
 }
 
 .v-card__title {
   word-break: normal !important;
 }
+
 .header header {
   z-index: 100 !important;
 }
+
 </style>

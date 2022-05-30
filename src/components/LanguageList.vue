@@ -121,7 +121,7 @@ export default Vue.extend({
     "change-language": "言語を{lang}に変更",
     "currently-selected": "現在の選択",
     "English": "英語",
-    "Spanish": "スパイン語",
+    "Spanish": "スペイン語",
     "French": "フランス語",
     "Chinese": "中国語",
     "Japanese": "日本語"

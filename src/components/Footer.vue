@@ -37,7 +37,20 @@ export default Vue.extend({
   width: 100%;
   text-align: center;
 }
-
+.footer{
+  .theme--dark{
+    .horizontal-aligner {
+      .v-btn{
+        background-color: rgba(89, 165, 218);
+      }
+    }
+  }
+}
+/*Changes the body too */
+.portfolio{
+  
+}
+  
 
 </style>
 

@@ -12,8 +12,9 @@
         .y-spacer
         span.f-sub-bold(v-html="$t('description')")
         .y-spacer
-        v-btn(download, :href="'/documents/' + $t('resume-file')") {{ $t('resume') }}
-          v-icon mdi-download
+        .y-spacer
+          v-btn(download, :href="'/documents/' + $t('resume-file')") {{ $t('resume') }}
+            v-icon mdi-download
 </template>
 
 <script lang="ts">
@@ -33,18 +34,19 @@ export default Vue.extend({
     background-position: center;
     background-size: cover;
   }
-
 }
-
 
 .theme--dark {
   .about {
     .background {
       background: linear-gradient(
         to bottom,
-       rgba(0, 0, 0, 0.5),
-        rgba(0,0,0, 0.5)
+       rgba(0, 0, 0, 0.9),
+        rgba(17,17,17, 0.9)
       ), url("../assets/images/about.jpg");;
+    }
+    .v-btn{
+      background-color: rgba(89, 165, 218,0.7);
     }
   }
 }
@@ -54,12 +56,13 @@ export default Vue.extend({
    .background {
       background: linear-gradient(
         to bottom,
-       rgba(256, 256, 256, 0.3),
-       rgba(256, 256, 256, 0.3)
+       rgba(255, 255, 240,1),
+       rgba(89, 165, 218,0.7)
       ), url("../assets/images/about.jpg");;
     }
   }
 }
+
 </style>
 
 <i18n>
