@@ -3,6 +3,8 @@ module.exports = {
         'vuetify'
     ],
 
+    publicPath: process.env.NODE_ENV === "production" ? "/personal-website/" : "/",
+
     pluginOptions: {
         i18n: {
             locale: 'es',
