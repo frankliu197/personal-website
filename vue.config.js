@@ -3,6 +3,8 @@ module.exports = {
         'vuetify'
     ],
 
+    publicPath:  "/",
+
     pluginOptions: {
         i18n: {
             locale: 'es',

@@ -69,8 +69,8 @@ export default Vue.extend({
 {
   "en": {
     "title": "About Me",
-    "description-main": "My name is Frank Liu and I will be graduating Carleton University in April.",
-    "description": "I am one of those computer science enthusiasts who codes both as a hobby and as a career. I am fascinated with software algorithms and architecture/design patterns. This includes technologies such as Machine Learning, Operating Systems Design (especially Linux), Container Management and Web Frameworks.<br><br>When I am not programming, you can usually find me exercising, hanging out with other people or playing the piano. I love meeting new people so feel free to contact me and say hello!",
+    "description-main": "My name is Frank Liu and I'm a Carleton University graduate with 4.5 years of experience",
+    "description": "I am one of those computer science enthusiasts who codes both as a hobby and as a career. I am fascinated with software algorithms and architecture/design patterns. This includes technologies such as Machine Learning, System architecture and Web Frameworks.<br><br>When I am not programming, you can usually find me exercising, hanging out with other people or playing the piano. I love meeting new people so feel free to contact me and say hello!",
     "resume-file": "Resume.pdf",
     "resume": "Resume"
   },

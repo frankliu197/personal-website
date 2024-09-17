@@ -1,5 +1,8 @@
 {
     "portfolio": {
+        "Level Access": {
+            "Full Stack Developer": "<ul><li>Reduced query time for a <strong>700 million-entry MongoDB</strong> collection from <strong>30 seconds to 5 seconds</strong> by implementing indexable fields and creating new compound indexes</li><li>Spearheaded the transition from synchronous to asynchronous reporting architecture, enabling extensive report generation, and utilized <strong>RabbitMQ</strong> job infrastructure to queue generation and deletion tasks in response to data changes or expiration</li><li>Led the development of a bulk upload architecture, allowing customers to upload large volumes of data and schedule hundreds of tasks at once using <strong>Typescript</strong> and <strong>Angular</strong></li><li>Improved website scanning process efficiency by scaling maximum pages from <strong>1,000 to 10,000</strong>, optimizing memory consumption with <strong>Redis</strong>, and implementing fail-safe resumption with atomicity</li></ul>"
+        },
         "Red Canari": {
             "Software Developer & Hacker": "<ul><li>Developed <em>RegenX</em>, a web tool that generates customized reports based on report schemas, using <strong>React</strong>, <strong>Couch/PouchDB (NoSQL)</strong>, and <strong>Spring Reactive</strong></li><li>Assembled a proxy database for runtime datatype analysis and version controlling through hooks,which uncovered&nbsp;over <strong>40</strong>&nbsp;data integrity issues/bugs</li><li>Collaborated with the CEO and the marketing director to promote <em>RegenX</em> by providing technical support and use cases</li></ul>"
         },
@@ -12,6 +15,9 @@
         },
         "Carleton University": {
             "Software Developer": "<ul><li>Implemented a program in Java that allows transferable datasets used for machine learning between <strong>DL4J</strong> and <strong>Keras</strong> frameworks</li><li>Redesigned <em>Java Learning by Observation Framework</em>, increasing speed, scalability, and extensibility</li></ul>"
+        },
+        "Math Latin Input": {
+            "Lead Developer":"My very first project designed to help people learn chess and chess openings. Coded in <strong>Java</strong> with a group of 2 people" 
         },
         "Linux Tutorials": "Wrote Linux tutorials as a goal to teach the general public about Linux, and also to improve my technical writing skills",
         "Chess Learning Program": {

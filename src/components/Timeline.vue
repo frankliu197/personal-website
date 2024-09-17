@@ -19,13 +19,13 @@
               span.f-main {{ item.title }}
               v-spacer
               TimelineIcons(:item="item")
-            v-card-title(v-if="item.role").mb-0(style="margin-top: -35px")
+            v-card-title(v-if="item.role" style="margin-top: -35px").mb-0
               span.f-sub-bold {{ item.role }}
           v-card-subtitle.pt-0.pb-2
             span.f-sub {{ item.start }}
             span.f-sub(v-if="item.end")  - {{ item.end }}
-          v-card-text(v-if="item.role").pt-0(v-html="$t('portfolio.' + item.title + '.' + item.role)")
-          v-card-text(v-else).pt-0(v-html="$t('portfolio.' + item.title)")
+          v-card-text(v-if="item.role" v-html="$t('portfolio.' + item.title + '.' + item.role)").pt-0
+          v-card-text(v-else v-html="$t('portfolio.' + item.title)").pt-0
     template(v-else)
       .vertical-aligner(style="gap: 10px")
         v-card.text-left.elevation-2.pb-1(v-for="item in items" :key="item.title")
@@ -38,8 +38,8 @@
           v-card-subtitle.pt-0.pb-2
             span.f-sub {{ item.start }}
             span.f-sub(v-if="item.end")  - {{ item.end }}
-          v-card-text(v-if="item.role").pt-0(v-html="$t('portfolio.' + item.title + '.' + item.role)")
-          v-card-text(v-else).pt-0(v-html="$t('portfolio.' + item.title)")
+          v-card-text(v-if="item.role" v-html="$t('portfolio.' + item.title + '.' + item.role)").pt-0
+          v-card-text(v-else v-html="$t('portfolio.' + item.title)").pt-0
 </template>
 <script lang="ts">
 //https://wordhtml.com/
