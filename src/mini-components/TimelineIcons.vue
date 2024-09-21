@@ -39,7 +39,8 @@ export default Vue.extend({
     "main": "Main",
     "sub": "Par1 {0} Par2 {0} Par{0}",
     "resume-file": "Resume.pdf",
-    "resume": "Resume"
+    "resume": "Resume",
+    "visit-source-code": "Visit source code"
   },
   "es" : {
     "resume-file": "Resume_es.pdf"
