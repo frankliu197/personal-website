@@ -6,7 +6,7 @@
         v-card(tile height="100%")
           v-card-title Broken Clown
           v-card-subtitle First transcription
-          v-btn(download href="/music/Broken Clown.mp3") listen
+          v-btn(download :href="`${baseUrl}music/Broken%20Clown.mp3`") listen
        
 </template>
 

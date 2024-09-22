@@ -9,6 +9,14 @@ import CountryFlag from 'vue-country-flag'
 Vue.component('country-flag', CountryFlag)
 Vue.config.productionTip = false
 
+Vue.mixin({
+  data() {
+    return {
+      baseUrl: process.env.BASE_URL
+    };
+  }
+});
+
 const app = new Vue({
   router,
   vuetify,

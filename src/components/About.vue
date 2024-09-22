@@ -13,14 +13,14 @@
         span.f-sub-bold(v-html="$t('description')")
         .y-spacer
         .y-spacer
-          v-btn(download, :href="'/documents/' + $t('resume-file')") {{ $t('resume') }}
+          v-btn(download, :href="`${baseUrl}documents/${$t('resume-file')}`") {{ $t('resume') }}
             v-icon mdi-download
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 export default Vue.extend({
-  name: "About",
+  name: "About"
 });
 </script>
 
@@ -75,8 +75,7 @@ export default Vue.extend({
     "resume": "Resume"
   },
   "es" : {
-    "title": "Sobre Mi",
-    "resume-file": "Resume_es.pdf"
+    "title": "Sobre Mi"
   },
   "zh" :{
     "title": "关于我" 
