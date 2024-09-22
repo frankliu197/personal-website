@@ -102,7 +102,7 @@
     ],
     "hobbies": [{
             "title": "Piano",
-            "link": "/Piano"
+            "link": "Piano"
         },
         {
             "title": "Volleyball"

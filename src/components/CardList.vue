@@ -6,9 +6,9 @@
         v-img(:src="require(`@/assets/portfolio/${item.title}.jpg`)" alt="" height="250px")
         v-card-title.f-title-small {{ $t("portfolio." + item.title + ".title" ) }}
         v-card-text.f-sub {{ $t("portfolio." + item.title + ".description") }}
-        v-fade-transition(v-if="item.link")
+        // v-fade-transition(v-if="item.link")
           v-overlay(v-if="hover" absolute color="primary")
-            v-btn(:href="item.link") {{ $t("more-info")}}
+            v-btn(:href="baseUrl + item.link") {{ $t("more-info")}}
 </template>
 
 <script lang="ts">
