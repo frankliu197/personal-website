@@ -13,7 +13,7 @@
         span.f-sub-bold(v-html="$t('description')")
         .y-spacer
         .y-spacer
-          v-btn(download, :href="`${baseUrl}documents/${$t('resume-file')}`") {{ $t('resume') }}
+          v-btn(download, :href="baseUrl + 'documents/' + $t('resume-file')") {{ $t('resume') }}
             v-icon mdi-download
 </template>
 
